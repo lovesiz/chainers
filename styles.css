@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+img{
+width:35px;
+}
+
+.container {
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.form, .tables {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex: 1 1 600px;
+  min-width: 300px;
+}
+.tables {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#tablo1 caption {
+  caption-side: top;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+#tablo2 caption {
+  caption-side: top;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #40E0D0;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+#tablo3 caption {
+  caption-side: top;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #008000;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#tablo1 th {
+  background-color: #007BFF;
+  color: white;
+}
+
+#tablo2 th {
+  background-color: #40E0D0;
+  color: white;
+}
+#tablo3 th {
+  background-color: #008000;
+  color: white;
+}
