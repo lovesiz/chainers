@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chainers Ürün Puanları</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="menu">
+<a href="index.html">
+   <div class="menu-button">
+    <div class="icon">
+    🌻 <!-- Veya bir <img src="..." alt=""> -->
+    </div>
+    <div class="label">Farm Puanları</div>
+  </div></a>
+<a href="hayvan.html">
+<div class="menu-button">
+    <div class="icon">
+      🐮 <!-- Veya bir <img src="..." alt=""> -->
+    </div>
+    <div class="label">Hayvancılık Puanları</div>
+  </div>
+</a>
+<a href="gelir.html">
+<div class="menu-button">
+    <div class="icon">
+      <img src="https://www.emojiall.com/images/60/emojione/1F5A9.png" alt=""> <!-- Veya bir <img src="..." alt=""> -->
+    </div>
+    <div class="label">Hesaplama</div>
+  </div>
+</a>
+    <a href="verim.html">
+   <div class="menu-button">
+    <div class="icon">
+    🌻 <!-- Veya bir <img src="..." alt=""> -->
+    </div>
+    <div class="label">Farm Verimlilik</div>
+  </div></a>
+</div>
+  <header>
+    <h1>Chainers Farm Ürün Puanları</h1>
+  </header>
+<div class="ads">
+<iframe data-aa='2396643' src='//ad.a-ads.com/2396643?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+
+</div>
+
+  <main>
+    <div class="table-container">
+    <table id="seedTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Ürün Adı <span class="arrow" id="arrow-0"></span></th>
+          <th onclick="sortTable(1)">Common <span class="arrow" id="arrow-1"></span></th>
+          <th onclick="sortTable(2)">Uncommon <span class="arrow" id="arrow-2"></span></th>
+          <th onclick="sortTable(3)">Rare <span class="arrow" id="arrow-3"></span></th>
+          <th onclick="sortTable(4)">Epic <span class="arrow" id="arrow-4"></span></th>
+          <th onclick="sortTable(5)">Legendary <span class="arrow" id="arrow-5"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Strawberry</td><td>0,5</td><td>1</td><td>1,5</td><td>3,5</td><td>6,5</td></tr>
+        <tr><td>Peas</td><td>0,25</td><td>0,5</td><td>0,75</td><td>1</td><td>1,75</td></tr>
+        <tr><td>Corn</td><td>0,33</td><td>0,5</td><td>0,75</td><td>1,25</td><td>2</td></tr>
+        <tr><td>Radish</td><td>0,25</td><td>0,5</td><td>0,75</td><td>1,25</td><td>2</td></tr>
+        <tr><td>Cabbage</td><td>0,23</td><td>0,38</td><td>0,62</td><td>1</td><td>1,62</td></tr>
+        <tr><td>Onion</td><td>0,47</td><td>0,87</td><td>1,73</td><td>3,47</td><td>7,2</td></tr>
+        <tr><td>Eggplant</td><td>0,47</td><td>1,06</td><td>1,76</td><td>3,59</td><td>7,59</td></tr>
+        <tr><td>Spinach</td><td>0,48</td><td>0,96</td><td>2</td><td>3,87</td><td>7,78</td></tr>
+        <tr><td>Cauliflower</td><td>0,47</td><td>0,84</td><td>1,91</td><td>3,53</td><td>6,84</td></tr>
+        <tr><td>Leek</td><td>0,47</td><td>0,96</td><td>1,82</td><td>3,67</td><td>7,49</td></tr>
+        <tr><td>Sunflower</td><td>0,53</td><td>1,17</td><td>2,77</td><td>6,27</td><td>14,57</td></tr>
+        <tr><td>Bell pepper</td><td>0,46</td><td>0,92</td><td>1,89</td><td>3,71</td><td>5,32</td></tr>
+        <tr><td>Garlic</td><td>0,46</td><td>0,76</td><td>1,5</td><td>2,97</td><td>5,19</td></tr>
+        <tr><td>Mangold</td><td>0,46</td><td>0,89</td><td>1,81</td><td>3,61</td><td>7,18</td></tr>
+        <tr><td>Watermelon</td><td>0,5</td><td>0,98</td><td>1,92</td><td>4,04</td><td>8,09</td></tr>
+        <tr><td>Snowdrop</td><td>0,45</td><td>0,9</td><td>1,77</td><td>3,59</td><td>7,15</td></tr>
+        <tr><td>Holly seeds</td><td>0,51</td><td>1</td><td>2,05</td><td>3,89</td><td>7,79</td></tr>
+        <tr><td>Chili pepper</td><td>0,45</td><td>0,88</td><td>1,77</td><td>3,52</td><td>7,1</td></tr>
+        <tr><td>Daikon</td><td>0,44</td><td>0,88</td><td>1,75</td><td>3,53</td><td>7,13</td></tr>
+        <tr><td>Sweet potato</td><td>0,44</td><td>0,88</td><td>1,73</td><td>3,47</td><td>6,97</td></tr>
+        <tr><td>White Lily</td><td>0,63</td><td>1,33</td><td>3,23</td><td>7,23</td><td>15,32</td></tr>
+        <tr><td>Broccoli</td><td>0,43</td><td>0,85</td><td>1,73</td><td>3,47</td><td>6,96</td></tr>
+        <tr><td>Ginger</td><td>0,42</td><td>0,86</td><td>1,69</td><td>3,38</td><td>6,74</td></tr>
+        <tr><td>Black Lotus</td><td>0,56</td><td>1,25</td><td>2,92</td><td>6,67</td><td>13,96</td></tr>
+        <tr><td>Cucumber</td><td>0,73</td><td>1,14</td><td>2,46</td><td>5,42</td><td>10,7</td></tr>
+        <tr><td>Mint</td><td>0,5</td><td>1,35</td><td>2,8</td><td>6,25</td><td>12</td></tr>
+        <tr><td>BlueBerry</td><td>0,52</td><td>0,98</td><td>3,13</td><td>6,79</td><td>13,78</td></tr>
+        <tr><td>Purple Carrot</td><td>0,53</td><td>1,04</td><td>2</td><td>7,23</td><td>14,44</td></tr>
+        <tr><td>Melon</td><td>0,57</td><td>1,1</td><td>2,36</td><td>4,62</td><td>15</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </main>
+</body>
+</html>
