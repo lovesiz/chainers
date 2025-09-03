@@ -8,15 +8,15 @@ function hesapla() {
   }
 
   // Tablo 1 katsayıları
-  const katsayilar1 = [75, 125, 5];
+  const katsayilar1 = [0.0015, 95, 5];
   const ids1 = ['t1s1', 't1s2', 't1s3'];
 
   // Tablo 2 katsayıları
-  const katsayilar2 = [675, 1125, 45];
+  const katsayilar2 = [0.017, 815, 60];
   const ids2 = ['t2s1', 't2s2', 't2s3'];
 
   // Tablo 3 katsayıları
-  const katsayilar3 = [1350, 2250, 90];
+  const katsayilar3 = [0.0315, 1595, 117];
   const ids3 = ['t3s1', 't3s2', 't3s3'];
 
   // Tüm tabloları hesapla
@@ -27,3 +27,4 @@ function hesapla() {
     });
   });
 }
+
