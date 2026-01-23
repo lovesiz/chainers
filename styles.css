@@ -1,0 +1,364 @@
+/* Genel Sıfırlama ve Font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0b1424;
+    color: #f0f0f0;
+    min-height: 100vh; /* Footer'ın en altta kalmasını sağlamak için */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER (ÜST MENÜ) STİLLERİ --- */
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #17243c;
+    padding: 10px 20px;
+    border-bottom: 2px solid #00c6ff;
+}
+
+.logo-area {
+    padding-right: 30px; 
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.navigation-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu-item {
+    background-color: #2b3952;
+    border: 1px solid #3d4a66;
+    border-radius: 5px;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #3d4a66;
+}
+
+.menu-item a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.user-actions .login-btn {
+    background-color: #ffc107;
+    color: #17243c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.user-actions .login-btn:hover {
+    background-color: #e0b000;
+}
+
+/* --- REKLAM ALANI STİLİ --- */
+.ad-banner {
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin: 10px 0;
+}
+
+.ad-banner h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.5em;
+}
+
+.ad-banner p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+
+/* --- İÇERİK (MAIN) STİLLERİ --- */
+.content-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-grow: 1; /* İçeriğin esneyerek footer'ı aşağı itmesini sağlar */
+}
+
+.left-sidebar {
+    width: 300px;
+    background-color: #17243c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.left-sidebar h3 {
+    color: #00c6ff;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3d4a66;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #17243c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+    color: #ffc107;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+.index-content{
+border: 1px dashed #00c6ff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px;
+font-size:18px;
+  margin-bottom:20px;
+}
+.index-content a{
+
+    text-decoration: none;
+    color:#ffc107;
+padding:5px;
+border-radius:5px;
+font-size:20px;
+font-weight:bold;
+
+}
+.index-content a:hover{
+
+    text-decoration: none;
+    color:#0b1424;
+background-color:#ffc107;
+
+}
+.table-placeholder {
+    background-color: #2b3952;
+    padding: 40px;
+    min-height: 500px;
+    border-radius: 5px;
+    border: 1px dashed #00c6ff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #000;
+  margin-bottom:20px;
+}
+
+#seedsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 800px; /* Tablonun minimum genişliği */
+}
+
+/* Tablo Başlığı (<thead>) Stilleri */
+#seedsTable thead th {
+    background-color: #a7d3a7; /* Başlık arka plan rengi */
+    color: #333;
+    padding: 10px 5px;
+    text-align: center;
+    border: 1px solid #dddedf;
+    font-weight: bold;
+    white-space: nowrap; /* Başlıkların tek satırda kalmasını sağla */
+}
+
+/* İlk Sütun (Detaylar) Başlığı İçin Özel Stil */
+#seedsTable thead th:first-child {
+    background-color: #5d985d;
+    color: white;
+    text-align: left;
+}
+
+/* Tablo Satırları (<tbody> tr) Stilleri */
+#seedsTable tbody tr {
+    /* Her iki satırda bir farklı renk tonu için: */
+    background-color: #f9f9f9;
+  
+}
+
+#seedsTable tbody tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+/* Satır Üzerine Gelince (Hover) */
+#seedsTable tbody tr:hover {
+    background-color: #2ad000; /* Hafif yeşil vurgu */
+  color:#fff;
+}
+
+/* Tablo Hücreleri (<td>) Stilleri */
+#seedsTable tbody td {
+    padding: 8px 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* İlk Sütun (Detaylar) İçin Özel Stil */
+#seedsTable tbody td:first-child {
+    text-align: left;
+    display: flex;
+    align-items: center;
+  font-size:17px;
+    gap: 20px; /* Resim ve metin arası boşluk */
+    padding-left: 10px;
+    white-space: nowrap;
+}
+.table-placeholder2 {
+    background-color: #2b3952;
+    padding: 20px 10px;
+    border-radius: 5px;
+    border: 1px dashed #00c6ff;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+  margin-bottom:20px;
+}
+#seedsTable2 {
+    width: 40%;
+    border-collapse: collapse;
+    font-size: 0.9em; /* Tablonun minimum genişliği */
+  margin:0 auto;
+}
+
+
+/* Tablo Başlığı (<thead>) Stilleri */
+#seedsTable2 thead th {
+    background-color: #a7d3a7; /* Başlık arka plan rengi */
+    color: #333;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #dddedf;
+    font-weight: bold;
+    white-space: nowrap; /* Başlıkların tek satırda kalmasını sağla */
+}
+
+/* İlk Sütun (Detaylar) Başlığı İçin Özel Stil */
+#seedsTable2 thead th:first-child {
+    background-color: #5d985d;
+    color: white;
+    text-align: center;
+}
+
+/* Tablo Satırları (<tbody> tr) Stilleri */
+#seedsTable2 tbody tr {
+    /* Her iki satırda bir farklı renk tonu için: */
+    background-color: #f9f9f9;
+  
+}
+
+#seedsTable2 tbody tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+
+/* Tablo Hücreleri (<td>) Stilleri */
+#seedsTable2 tbody td {
+    padding: 8px 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+  color:#000;
+}
+
+/* Satır Üzerine Gelince (Hover) */
+
+
+th span{
+    display: flex;
+    justify-content: center;
+  padding:10px;
+}
+
+/* İlk Sütun (Detaylar) İçin Özel Stil */
+#seedsTable2 tbody td:first-child {
+    text-align: left;
+    display: flex;
+    align-items: center;
+  font-size:17px;
+    gap: 20px; /* Resim ve metin arası boşluk */
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+
+/* Sütunlara Özel Renklendirme (Amount of Biopoints / Biopoints Ratio) */
+/* Ortak (Common) */
+.common-bg { background-color: #959595; } /* Açık Mavi */
+/* Nadir (Uncommon) */
+.uncommon-bg { background-color: #2ad000; } /* Açık Yeşil */
+/* rare (Uncommon) */
+.rare-bg { background-color: #10cccc; } /* Açık Yeşil */
+/* Epik (Epic) */
+.epic-bg { background-color: #fe33dc; } /* Açık Pembe */
+/* Efsanevi (Legendary) */
+.legendary-bg { background-color: #d8b800; } /* Açık Sarı */
+
+/* Resim Sütunu Stili */
+.seed-image-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius:10px;
+    background-color:#d8b800;
+}
+.image-icon{
+height: 190px;
+    border-radius:15px;
+}
+
+/* --- FOOTER STİLİ (YENİ) --- */
+.site-footer {
+    background-color: #17243c; /* Üst menü ile aynı veya uyumlu arka plan */
+    color: #99aab5;
+    padding: 20px;
+    margin-top: 20px; /* İçerikten biraz boşluk bırak */
+    border-top: 2px solid #00c6ff; /* Üst sınır çizgisi */
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta gelmesi için */
+}
+
+.social-links a {
+    color: #f0f0f0; /* İkon rengi */
+    font-size: 24px;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffc107; /* Fare üzerine gelince sarı renk */
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+/* EMOJI DESTEK KODU (styles.css'e eklenmeli) */

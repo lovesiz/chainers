@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chainers - Verimlilik Analizi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Verimlilik sayfasına özel ek stil düzenlemeleri */
+        .filter-container {
+            background-color: #17243c;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #00c6ff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .custom-select {
+            padding: 10px 20px;
+            background-color: #2b3952;
+            color: white;
+            border: 1px solid #00c6ff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .rank-highlight {
+            font-weight: bold;
+            color: #17243c;
+            font-size: 1.1em;
+        }
+
+        .efficiency-rate {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-menu">
+        <div class="logo-area">
+            <span class="logo-text">CHAINERS</span>
+        </div>
+       <nav class="navigation-menu">
+            <div class="menu-item"><a href="index.html">ANASAYFA</a></div>
+            <div class="menu-item"><a href="tohumlar.html">TOHUMLAR</a></div>
+            <div class="menu-item"><a href="hayvan.html">HAYVANLAR</a></div>
+            <div class="menu-item"><a href="yem.html">YEMLER</a></div>
+             <div class="menu-item"><a href="verimlilik.html">VERİMLİLİK</a></div>
+             <div class="menu-item"><a href="bagis.html">BAĞIŞ YAP</a></div>
+        </nav>
+        <div class="user-actions"></div>
+    </header>
+
+   <div class="ad-banner">
+<iframe data-aa='2396643' src='//ad.a-ads.com/2396643?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+    </div>
+
+    <main class="content-container">
+        <div class="main-content">
+            
+            <div class="filter-container">
+                <span>Sıralama Kriteri Seçin:</span>
+                <select id="raritySelect" class="custom-select" onchange="generateTopTen()">
+                    <option value="common">Common</option>
+                    <option value="uncommon">Uncommon</option>
+                    <option value="rare">Rare</option>
+                    <option value="epic">Epic</option>
+                    <option value="legendary">Legendary</option>
+                </select>
+            </div>
+
+            <div class="table-placeholder">
+                <table id="seedsTable">
+                    <thead>
+                        <tr>
+                            <th>Sıra</th>
+                            <th>Tohum</th>
+                            <th>Büyüme Süresi</th>
+                            <th id="columnHeader">Biopuan / Dakika</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankingBody">
+                        </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Chainers Bilgilendiriyor. Tüm Hakları Saklıdır.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script>
+        function generateTopTen() {
+            const rarity = document.getElementById('raritySelect').value;
+            const tbody = document.getElementById('rankingBody');
+            const header = document.getElementById('columnHeader');
+            
+            // Başlığı güncelle (Hangi nadirlik seçildiyse onun rengini alsın)
+            header.className = rarity + "-bg";
+            header.innerText = rarity.toUpperCase() + " Verimlilik (BP/DK)";
+
+            // 1. Verileri seçilen nadirliğin oranına göre sırala
+            // Not: Bazı ürünlerde o nadirlik 0 olabilir, onları da dikkate alır
+            const sorted = [...seedData]
+                .filter(item => item.rates[rarity] > 0) // Sadece o seviyede üretimi olanları getir
+                .sort((a, b) => b.rates[rarity] - a.rates[rarity]);
+            
+            // 2. İlk 10'u al
+            const topTen = sorted.slice(0, 15);
+            
+            // 3. Tabloyu oluştur
+            tbody.innerHTML = "";
+            topTen.forEach((item, index) => {
+                const imageName = item.name.toLowerCase().replace(/\s+/g, '') + ".png";
+                const imagePath = `image/${imageName}`;
+
+                const row = `
+                    <tr>
+                        <td class="rank-highlight">#${index + 1}</td>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <img src="${imagePath}" class="seed-image-icon" onerror="this.src='image/default.png'">
+                                <span>${item.name}</span>
+                            </div>
+                        </td>
+                        <td>${item.time}</td>
+                        <td class="${rarity}-bg efficiency-rate">${item.rates[rarity]}</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Sayfa yüklendiğinde varsayılan olarak Common listesini getir
+        window.onload = generateTopTen;
+    </script>
+</body>
+</html>

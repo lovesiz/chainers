@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chainers - Web Sitesi Düzeni</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+margin:30px auto;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* İlerleme Çubuğu Tasarımı */
+.progress-container {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ec0623, #ff6a00);
+    transition: width 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Cüzdan Alanı Tasarımı */
+.wallet-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.wallet-box p {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.address-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#wallet-address-text {
+    font-family: monospace;
+    font-size: 14px;
+    color: #333;
+    word-break: break-all;
+}
+
+.copy-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#copy-icon {
+    cursor: pointer;
+    color: #ec0623;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+#copy-icon:hover {
+    transform: scale(1.2);
+}
+
+#copy-status {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    display: none;
+    white-space: nowrap;
+}
+</style>
+</head>
+<body>
+
+    <header class="top-menu">
+        <div class="logo-area">
+            <span class="logo-text">CHAINERS</span>
+        </div>
+        
+        <nav class="navigation-menu">
+            <div class="menu-item"><a href="index.html">ANASAYFA</a></div>
+            <div class="menu-item"><a href="tohumlar.html">TOHUMLAR</a></div>
+            <div class="menu-item"><a href="hayvan.html">HAYVANLAR</a></div>
+            <div class="menu-item"><a href="yem.html">YEMLER</a></div>
+             <div class="menu-item"><a href="verimlilik.html">VERİMLİLİK</a></div>
+             <div class="menu-item"><a href="bagis.html">BAĞIŞ YAP</a></div>
+        </nav>
+        
+        <div class="user-actions">
+           
+        </div>
+    </header>
+
+    <div class="ad-banner">
+<iframe data-aa='2396643' src='//ad.a-ads.com/2396643?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+    </div>
+<main class="content-container">
+    <div class="main-content">
+<div class="card">
+        <h2>TRX Hedef İlerlemesi</h2>
+        
+        <div class="progress-wrapper">
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <div class="progress-labels">
+                <span id="current-balance">0.00 TRX</span>
+                <span>Hedef: 100 TRX</span>
+            </div>
+        </div>
+
+        <div class="wallet-box">
+            <p>Cüzdan Adresi:</p>
+            <div class="address-container">
+                <span id="wallet-address-text">Yükleniyor...</span>
+                <div class="copy-action">
+                    <i class="fa-regular fa-copy" id="copy-icon" onclick="copyToClipboard()"></i>
+                    <span id="copy-status">Kopyalandı!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="index-content">
+<h3>Yukarıda Yer Alan TRC20 Adresine Tron Göndererek Destek Olabilirsin !!!</h3>
+
+</br></br></br></br>
+Bu Sitenin <a href="https://chainers.io/?r=m9x1r7u0" target="_blank">Chainers.io</a> yöneticileri ile bir ilişkisi yoktur. <a href="https://www.youtube.com/@bilgilendiriyor" target="_blank">Bilgilendiriyor</a> tarafından yapılmıştır.
+      </div>
+</div>
+</main>
+  
+   <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; Bilgilendiriyor Tüm Hakları Saklıdır.</p>
+            <div class="social-links"><a href="URL_DISCORD" target="_blank" aria-label="Discord"><i class="fab fa-youtube"></i></a>
+                <a href="URL_INSTAGRAM" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="URL_TWITTER" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="URL_DISCORD" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+              
+                </div>
+                
+        </div>
+    </footer>
+<script>
+// Yapılandırma
+const WALLET_ADDRESS = "TSTSYzs8s4xh2yaVVs5EFuPvDqhZJ9Dpa1"; // Buraya Kendi Cüzdanını Yaz
+const GOAL_AMOUNT = 100; // Hedef TRX Miktarı
+
+/**
+ * TronGrid üzerinden bakiye çeker
+ */
+async function fetchBalance() {
+    try {
+        const response = await fetch(`https://api.trongrid.io/v1/accounts/${WALLET_ADDRESS}`);
+        const data = await response.json();
+
+        if (data.success && data.data.length > 0) {
+            const sunBalance = data.data[0].balance || 0;
+            const trxBalance = sunBalance / 1000000; // Sun to TRX
+            updateUI(trxBalance);
+        } else {
+            // Eğer cüzdan yeniyse ve hiç işlemi yoksa bakiye 0'dır
+            updateUI(0);
+        }
+    } catch (error) {
+        console.error("Veri çekme hatası:", error);
+        document.getElementById("current-balance").innerText = "Hata!";
+    }
+}
+
+/**
+ * Arayüzü günceller
+ */
+function updateUI(balance) {
+    const progressBar = document.getElementById("progress-bar");
+    const balanceText = document.getElementById("current-balance");
+    const addressDisplay = document.getElementById("wallet-address-text");
+
+    // Yüzde hesapla
+    const percentage = Math.min((balance / GOAL_AMOUNT) * 100, 100);
+
+    // DOM Güncelle
+    progressBar.style.width = `${percentage}%`;
+    balanceText.innerText = `${balance.toFixed(2)} TRX`;
+    addressDisplay.innerText = WALLET_ADDRESS;
+}
+
+/**
+ * Kopyalama işlevi
+ */
+function copyToClipboard() {
+    navigator.clipboard.writeText(WALLET_ADDRESS).then(() => {
+        const icon = document.getElementById("copy-icon");
+        const status = document.getElementById("copy-status");
+
+        // Görsel efektler
+        icon.classList.replace("fa-regular", "fa-solid");
+        icon.classList.replace("fa-copy", "fa-check");
+        status.style.display = "block";
+
+        setTimeout(() => {
+            icon.classList.replace("fa-solid", "fa-regular");
+            icon.classList.replace("fa-check", "fa-copy");
+            status.style.display = "none";
+        }, 2000);
+    });
+}
+
+// İlk çalıştırma
+fetchBalance();
+
+// Her 60 saniyede bir otomatik yenile
+setInterval(fetchBalance, 60000);
+</script>
+    <script src="js.js"></script>
+</body>
+</html>
