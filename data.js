@@ -42,6 +42,12 @@ const seedData = [
     { name: "Star Anise", time: "1 Saat 23 Dakika 20 Saniye", rates: { common: 0, uncommon: 0, rare: 1.70, epic: 0, legendary: 0 } },
     { name: "Star Anise", time: "4 Saat 10 Dakika", rates: { common: 0, uncommon: 0, rare: 0, epic: 5.16, legendary: 0 } },
     { name: "Star Anise", time: "12 Saat 30 Dakika", rates: { common: 0, uncommon: 0, rare: 0, epic: 0, legendary: 15.50 } },
+    // Dragon Fruit
+    { name: "Dragon Fruit", time: "25 Saat", rates: { common: 0.90, uncommon: 0, rare: 0, epic: 0, legendary: 0 } },
+    { name: "Dragon Fruit", time: "21 Saat", rates: { common: 0, uncommon: 1.83, rare: 0, epic: 0, legendary: 0 } },
+    { name: "Dragon Fruit", time: "17 Saat", rates: { common: 0, uncommon: 0, rare: 3.68, epic: 0, legendary: 0 } },
+    { name: "Dragon Fruit", time: "13 Saat", rates: { common: 0, uncommon: 0, rare: 0, epic: 7.69, legendary: 0 } },
+    { name: "Dragon Fruit", time: "9 Saat", rates: { common: 0, uncommon: 0, rare: 0, epic: 0, legendary: 15.56 } },
 
     // --- BAHAR TOHUMLARI ---
     { name: "Spinach", time: "23 Dakika", rates: { common: 0.48, uncommon: 0.96, rare: 2, epic: 3.87, legendary: 7.78 } },
@@ -121,4 +127,5 @@ const seedData = [
     { name: "Rose", time: "5 Saat", rates: { common: 0.22, uncommon: 0.43, rare: 0.95, epic: 2.38, legendary: 6.91 } },
     { name: "Tulip", time: "3 Dakika", rates: { common: 0.33, uncommon: 0.67, rare: 1.33, epic: 3, legendary: 7.67 } },
     { name: "Wheat", time: "18 Dakika", rates: { common: 0.22, uncommon: 0.44, rare: 1, epic: 2.5, legendary: 7.28 } }
+
 ];
