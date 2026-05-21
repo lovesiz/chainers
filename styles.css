@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+
 /* Genel Sıfırlama ve Font */
 body {
     margin: 0;
@@ -362,3 +367,80 @@ height: 190px;
     font-size: 0.9em;
 }
 /* EMOJI DESTEK KODU (styles.css'e eklenmeli) */
+
+.retro-text {
+    /* Yazı tipi ayarları */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 120px; /* Boyutu isteğinize göre değiştirebilirsiniz */
+    letter-spacing: -2px; /* Harfleri görseldeki gibi birbirine yaklaştırır */
+    color: #ffffff; /* Ana yazı rengi beyaz */
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1;
+
+    /* Katmanlı Retro Gölge Efekti 
+      Sırasıyla: Sarı/Turuncu -> Koyu Turuncu -> Pembe/Kırmızı tonları
+    */
+    text-shadow: 
+        /* 1. Katman: Sarımsı Turuncu */
+        0px 2px 0px #e2943b,
+        0px 4px 0px #e2943b,
+        0px 6px 0px #e2943b,
+        
+        /* 2. Katman: Koyu Turuncu */
+        0px 8px 0px #be4736,
+        0px 10px 0px #be4736,
+        0px 12px 0px #be4736,
+        
+        /* 3. Katman: Koyu Kırmızı/Pembe */
+        0px 14px 0px #85203b,
+        0px 16px 0px #85203b,
+        0px 18px 0px #85203b;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; 
+}
+
+/* Kartların Tasarımı (Artık birer Link) */
+.card {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #ffffff 0%, #e3edfa 100%); 
+    border-radius: 28px; 
+    
+    display: flex;
+    align-items: center;     
+    justify-content: center;  
+    padding: 15px;            
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease;
+    box-shadow: 0px 8px 0px #a4bad6; 
+    
+    /* Linklerin alt çizgisini ve varsayılan mavi rengini sıfırlamak için eklenenler: */
+    text-decoration: none; 
+}
+
+/* Yazı Stili */
+.card-text {
+    color: #1a386b; 
+    font-size: 19px; 
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+/* Tıklama Efekti */
+.card:active {
+    transform: translateY(4px);
+    box-shadow: 0px 4px 0px #a4bad6;
+}
+
+
