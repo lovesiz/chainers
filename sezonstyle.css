@@ -165,3 +165,34 @@ tr td {
     font-weight: 700;
     color: #38bdf8; /* Toplam XP alanı belirgin olsun diye açık mavi */
 }
+
+.retro-text2 {
+    /* Yazı tipi ayarları */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 50px; /* Boyutu isteğinize göre değiştirebilirsiniz */
+    letter-spacing: -2px; /* Harfleri görseldeki gibi birbirine yaklaştırır */
+    color: #ffffff; /* Ana yazı rengi beyaz */
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1;
+
+    /* Katmanlı Retro Gölge Efekti 
+      Sırasıyla: Sarı/Turuncu -> Koyu Turuncu -> Pembe/Kırmızı tonları
+    */
+    text-shadow: 
+        /* 1. Katman: Sarımsı Turuncu */
+        0px 2px 0px #e2943b,
+        0px 4px 0px #e2943b,
+        0px 6px 0px #e2943b,
+        
+        /* 2. Katman: Koyu Turuncu */
+        0px 8px 0px #be4736,
+        0px 10px 0px #be4736,
+        0px 12px 0px #be4736,
+        
+        /* 3. Katman: Koyu Kırmızı/Pembe */
+        0px 14px 0px #85203b,
+        0px 16px 0px #85203b,
+        0px 18px 0px #85203b;
+}
