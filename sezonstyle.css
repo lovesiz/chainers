@@ -1,3 +1,13 @@
+.logo-area {
+    padding-right: 30px; 
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
 .table-container {
     background-color: #202849; /* Tablo çerçevesinin iç arka planı */
     border: 3px solid #ffd466; /* Altın rengi dış çerçeve çizgisi */
