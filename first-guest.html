@@ -8,6 +8,24 @@
   
     <link rel="stylesheet" href="ministyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Sağ tablodaki satırların tıklanabilir olduğunu belirtir */
+.reward-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Fareyle üzerine gelindiğinde hafif bir vurgu */
+.reward-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Temana göre rengi değiştirebilirsin */
+}
+
+/* O an seçili olan ve sol tabloyu güncelleyen satırın kalıcı vurgusu */
+.reward-table tbody tr.selected-reward-row {
+    background-color: rgba(241, 196, 15, 0.2) !important; /* Örn: Hafif sarı/altın tonu */
+    border-left: 4px solid #f1c40f;
+}
+    </style>
 </head>
 <body>
 
@@ -91,290 +109,243 @@
                     <td class="row-index">1</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/common/preview.png?v=1709042580935" alt="">
-                            <span>GROWTH FERTILIZER</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/basic/common/preview.png?v=1708363019810" alt="">
+                            <span>Common Cardboard Plot</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>840 XP</td>
-                    <td><strong>840 XP</strong></td>
+                    <td>1500 XP</td>
+                    <td><strong>1500 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">2</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/legendary/preview.png?v=1752764673781" alt="">
-                            <span>LEGENDARY GROWTH FERTILIZER</span>
+                            <img class="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
+                            <span>Common Protoflower Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>1080 XP</td>
-                    <td><strong>1920 XP</strong></td>
+                    <td>500 XP</td>
+                    <td><strong>2000 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">3</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/uncommon/preview.png?v=1774536709787" alt="">
-                            <span>LAVENDER SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/corn/common/preview.png?v=1779970746423" alt="">
+                            <span>Common Corn Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>3180 XP</td>
-                    <td><strong>5100 XP</strong></td>
+                    <td>2305 XP</td>
+                    <td><strong>4305 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">4</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/uncommon/preview.png?v=1774536709787" alt="">
-                            <span>JASMINE SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/rare/preview.png?v=1779970746423" alt="">
+                            <span>Rare Lavender Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>1791 XP</td>
-                    <td><strong>6891 XP</strong></td>
+                    <td>4950 XP</td>
+                    <td><strong>9255 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">5</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/uncommon/preview.png?v=1774536709786" alt="">
-                            <span>GOMPHRENA SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/peacock_feather/common/preview.png?v=1778075209520" alt="">
+                            <span>Common Peacock Food</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>2304 XP</td>
-                    <td><strong>9195 XP</strong></td>
+                    <td>3545 XP</td>
+                    <td><strong>12800 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">6</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/piggies/rare/preview.png?v=1765456665168" alt="">
-                            <span>MARTY MCSWINE</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
+                            <span>Common Protoflower Seed</span>
                         </div>
                     </td>
-                    <td>1</td>
-                    <td>6780 XP</td>
-                    <td><strong>15975 XP</strong></td>
+                    <td>2</td>
+                    <td>1185 XP</td>
+                    <td><strong>13985 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">7</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/common/preview.png?v=1774536709787" alt="">
-                            <span>LAVENDER SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/corn/common/preview.png?v=1779970746423" alt="">
+                            <span>Common Corn Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>3816 XP</td>
-                    <td><strong>19791 XP</strong></td>
+                    <td>5455 XP</td>
+                    <td><strong>19440 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">8</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/basic/common/preview.png?v=1708363019810" alt="">
-                            <span>CARDBOARD PLOT</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/rare/preview.png?v=1779970746423" alt="">
+                            <span>Rare Jasmine Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>4914 XP</td>
-                    <td><strong>24705 XP</strong></td>
+                    <td>11695 XP</td>
+                    <td><strong>31135 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">9</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/rare/preview.png?v=1774536709787" alt="">
-                            <span>LAVENDER SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/common/preview.png?v=1709042580935" alt="">
+                            <span>Common Growth Fertilizer</span>
                         </div>
                     </td>
-                    <td>1</td>
-                    <td>14451 XP</td>
-                    <td><strong>39156 XP</strong></td>
+                    <td>5</td>
+                    <td>8385 XP</td>
+                    <td><strong>39520 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">10</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/rare/preview.png?v=1774536709787" alt="">
-                            <span>JASMINE SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
+                            <span>Common Protoflower Seed</span>
                         </div>
                     </td>
-                    <td>1</td>
-                    <td>8136 XP</td>
-                    <td><strong>47292 XP</strong></td>
+                    <td>3</td>
+                    <td>2805 XP</td>
+                    <td><strong>42325 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">11</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/rare/preview.png?v=1774536709786" alt="">
-                            <span>GOMPHRENA SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/corn/uncommon/preview.png?v=1779970746423" alt="">
+                            <span>Uncommon Corn Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>10473 XP</td>
-                    <td><strong>57765 XP</strong></td>
+                    <td>12890 XP</td>
+                    <td><strong>55215 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">12</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/piggies/epic/preview.png?v=1770902719341" alt="">
-                            <span>VALENTINE</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/peacocks/common/preview.png?v=1778075231699" alt="">
+                            <span>Common Max Peace</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>30807 XP</td>
-                    <td><strong>88572 XP</strong></td>
+                    <td>27655 XP</td>
+                    <td><strong>82870 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">13</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/common/preview.png?v=1774536709786" alt="">
-                            <span>JASMINE SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/peacock_feather/common/preview.png?v=1778075209520" alt="">
+                            <span>Proto Peacock Food</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>17346 XP</td>
-                    <td><strong>105918 XP</strong></td>
+                    <td>19820 XP</td>
+                    <td><strong>102690 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">14</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/basic/uncommon/preview.png?v=1708363019810" alt="">
-                            <span>WOOD PLOT</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
+                            <span>Common Protoflower Seed</span>
                         </div>
                     </td>
-                    <td>1</td>
-                    <td>22326 XP</td>
-                    <td><strong>128244 XP</strong></td>
+                    <td>4</td>
+                    <td>6635 XP</td>
+                    <td><strong>109325 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">15</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/epic/preview.png?v=1774536709787" alt="">
-                            <span>JASMINE SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/corn/uncommon/preview.png?v=1779970746423" alt="">
+                            <span>Uncommon Corn Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>65676 XP</td>
-                    <td><strong>193920 XP</strong></td>
+                    <td>30480 XP</td>
+                    <td><strong>139805 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">16</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/epic/preview.png?v=1774536709787" alt="">
-                            <span>LAVENDER SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/rare/preview.png?v=1774536709786" alt="">
+                            <span>Rare Gomphrena Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>36978 XP</td>
-                    <td><strong>230898 XP</strong></td>
+                    <td>65385 XP</td>
+                    <td><strong>205190 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">17</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/epic/preview.png?v=1774536709786" alt="">
-                            <span>GOMPHRENA SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/legendary/preview.png?v=1752764673781" alt="">
+                            <span>Legendary Growth Fertilizer</span>
                         </div>
                     </td>
-                    <td>1</td>
-                    <td>47592 XP</td>
-                    <td><strong>278490 XP</strong></td>
+                    <td>10</td>
+                    <td>46865 XP</td>
+                    <td><strong>252055 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">18</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/peacocks/common/preview.png?v=1778075231699" alt="">
-                            <span>MAX PEACE</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
+                            <span>Common Protoflower Seed</span>
                         </div>
                     </td>
-                    <td>1</td>
-                    <td>140004 XP</td>
-                    <td><strong>418494 XP</strong></td>
+                    <td>5</td>
+                    <td>15690 XP</td>
+                    <td><strong>267745 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">19</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/common/preview.png?v=1774536709786" alt="">
-                            <span>GOMPHRENA SEEDS</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/corn/rare/preview.png?v=1774536709786" alt="">
+                            <span>Rare Corn Seed</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>78831 XP</td>
-                    <td><strong>497325 XP</strong></td>
+                    <td>72060 XP</td>
+                    <td><strong>339805 XP</strong></td>
                 </tr>
                 <tr>
                     <td class="row-index">20</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/basic/rare/preview.png?v=1708363019810" alt="">
-                            <span>PLASTIC PLOT</span>
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/peacocks/uncommon/preview.png?v=1778075231699" alt="">
+                            <span>Uncommon Maximiliano</span>
                         </div>
                     </td>
                     <td>1</td>
-                    <td>101454 XP</td>
-                    <td><strong>598779 XP</strong></td>
+                    <td>154580 XP</td>
+                    <td><strong>494385 XP</strong></td>
                 </tr>
-                <tr>
-                    <td class="row-index">21</td>
-                    <td>
-                        <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/legendary/preview.png?v=1774536709787" alt="">
-                            <span>LAVENDER SEEDS</span>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td>298449 XP</td>
-                    <td><strong>897228 XP</strong></td>
-                </tr>
-                <tr>
-                    <td class="row-index">22</td>
-                    <td>
-                        <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/legendary/preview.png?v=1774536709787" alt="">
-                            <span>JASMINE SEEDS</span>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td>168045 XP</td>
-                    <td><strong>1065273 XP</strong></td>
-                </tr>
-                <tr>
-                    <td class="row-index">23</td>
-                    <td>
-                        <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/legendary/preview.png?v=1774536709786" alt="">
-                            <span>GOMPHRENA SEEDS</span>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td>216276 XP</td>
-                    <td><strong>1281549 XP</strong></td>
-                </tr>
-                <tr>
-                    <td class="row-index">24</td>
-                    <td>
-                        <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/piggies/legendary/preview.png?v=1773241927049" alt="">
-                            <span>PIERITA</span>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td>636222 XP</td>
-                    <td><strong>1917771 XP</strong></td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
@@ -400,7 +371,124 @@
         </div>
     </footer>
 
-    <script src="js.js"></script>
+    <script>
+        // --- JS İÇİNDE TUTULAN VE DEĞİŞTİREBİLECEĞİNİZ DEĞERLER ---
+const DATA = {
+    toplamPuan: 0,        // Sayfa açılışında sağ tablodan dinamik olarak doldurulacak
+    storeDegeri: 9,       
+    mergeDegeri: 10,      
+    fertilizerDegeri: 8   
+};
+
+// --- DIŞ SİTEDEN ÇEKECEĞİNİZ RESİMLERİN DOSYA YOLLARI ---
+const ICONS = {
+    cfb: "https://rollerhelper.com/chainers_helper/en/img/Icones/pool/icon_cfb.png", 
+    dollar: "https://rollerhelper.com/chainers_helper/en/img/Icones/pool/dollar.png"
+};
+
+// Sol tabloyu (Çarpan) hesaplayan ve ekrana basan fonksiyon
+function initLeftTable() {
+    const tbody = document.getElementById("multiplier-tbody");
+    tbody.innerHTML = "";
+
+    // İlk satırın (x1) başlangıç (baz) değerlerini hesaplıyoruz
+    const baseStore = Math.round(DATA.toplamPuan / DATA.storeDegeri);
+    const baseMerge = Math.round(DATA.toplamPuan / DATA.mergeDegeri);
+    const baseFertilizer = Math.round(DATA.toplamPuan / DATA.fertilizerDegeri);
+
+    let isGreenHighlighted = false;
+
+    // Tam 50 satır olacak şekilde döngü
+    for (let x = 1; x <= 50; x++) {
+        const cfbValue = (x - 1) * 200;
+        const cryptoPrice = (x - 1) * 5;
+
+        // Her satırın değeri = ilk satırın değeri / x
+        const currentStore = Math.round(baseStore / x);
+        const currentMerge = Math.round(baseMerge / x);
+        const currentFertilizer = Math.round(baseFertilizer / x);
+
+        const tr = document.createElement("tr");
+
+        // KOŞUL: Spend in Store değeri, Convert CFB değerinden İLK KEZ küçük olduğunda satırı açık yeşil yap
+        if (!isGreenHighlighted && currentStore < cfbValue) {
+            tr.classList.add("green-highlight-row");
+            isGreenHighlighted = true; 
+        }
+
+        tr.innerHTML = `
+            <td class="row-index">x${x}</td>
+            <td>
+                <div class="cell-with-icon">
+                    ${cfbValue} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                </div>
+            </td>
+            <td>
+                <div class="cell-with-icon">
+                    ${cryptoPrice.toFixed(2)} <img class="cell-icon" src="${ICONS.dollar}" alt="">
+                </div>
+            </td>
+            <td>
+                <div class="cell-with-icon">
+                    ${currentStore} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                </div>
+            </td>
+            <td>
+                <div class="cell-with-icon">
+                    ${currentMerge} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                </div>
+            </td>
+            <td>${currentFertilizer}</td>
+        `;
+        
+        tbody.appendChild(tr);
+    }
+}
+
+// Sağ tablodaki satırlara tıklama özelliği kazandıran fonksiyon
+function setupRewardTableEvents() {
+    // Ödüller tablosunun body içindeki tüm satırlarını seçiyoruz
+    const rewardRows = document.querySelectorAll(".reward-table tbody tr");
+    
+    rewardRows.forEach(row => {
+        row.addEventListener("click", function() {
+            // Aktif satır vurgusu için eski seçili olanların sınıfını temizle
+            rewardRows.forEach(r => r.classList.remove("selected-reward-row"));
+            // Tıklanan satıra vurgu sınıfı ekle
+            this.classList.add("selected-reward-row");
+
+            // Son hücredeki (Toplam XP) strong etiketinin içindeki metni alıyoruz (Örn: "1500 XP")
+            const totalXpText = this.cells[4].querySelector("strong").innerText;
+            
+            // " XP" kısmını temizleyip sadece sayıya dönüştürüyoruz
+            const xpValue = parseInt(totalXpText.replace(/[^0-9]/g, ""), 10);
+            
+            // DATA nesnesini güncelleyip sol tabloyu yeniden hesaplatıyoruz
+            DATA.toplamPuan = xpValue;
+            initLeftTable();
+        });
+    });
+
+    // SAYFA İLK AÇILDIĞINDA: En son satırı otomatik seç ve tetikle
+    if (rewardRows.length > 0) {
+        const lastRow = rewardRows[rewardRows.length - 1];
+        
+        // Son satırın XP değerini ayıkla
+        const lastRowXpText = lastRow.cells[4].querySelector("strong").innerText;
+        const lastRowXpValue = parseInt(lastRowXpText.replace(/[^0-9]/g, ""), 10);
+        
+        // İlk hesabı son satıra göre yap ve satırı görsel olarak seçili hale getir
+        DATA.toplamPuan = lastRowXpValue;
+        lastRow.classList.add("selected-reward-row");
+        initLeftTable();
+    }
+}
+
+// Sayfa yüklendiğinde iki fonksiyonu da çalıştır
+window.onload = function() {
+    setupRewardTableEvents();
+};
+    </script>
 </body>
 
 </html>
