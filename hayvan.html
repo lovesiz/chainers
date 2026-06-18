@@ -6,6 +6,105 @@
     <title>Chainers - Web Sitesi Düzeni</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .table-container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Buton Grubu Stilleri */
+.button-group {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tier-btn {
+    background-color: #2c3e50;
+    color: #fff;
+    border: 2px solid #34495e;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tier-btn:hover {
+    background-color: #34495e;
+}
+
+.tier-btn.active {
+    background-color: #27ae60;
+    border-color: #2ecc71;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.4);
+}
+
+/* Tablo Genel Stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+th, td {
+    border: 1px solid #bdc3c7;
+    padding: 12px;
+    font-size: 15px;
+}
+
+/* Tablo Başlık Renkleri (Görselinizle Birebir) */
+.bg-dark-green {
+    background-color: #5b9265;
+    color: #fff;
+}
+
+.bg-light-green {
+    background-color: #a3d1a3;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.bg-medium-green {
+    background-color: #61a070;
+    color: #fff;
+}
+
+/* Kritik Şans Bilgi Satırı */
+.bg-critical-info {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 8px !important;
+}
+
+/* Görsel ve Başlık Düzeni */
+.product-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+    </style>
 </head>
 <body>
 
@@ -44,243 +143,320 @@
 <main class="content-container">
     <div class="main-content">
 <div class="table-placeholder">
-            <table id="seedsTable">
-                <thead>
-                    <tr>
-                        <th rowspan="2">Ürün</th>
-                        <th></th>
-                        <th colspan="5">Kazanılan Biopuan Miktarı</th>
-                        <th colspan="5">Dakikaya Göre Biopuan Oranı</th>
-                    </tr>
-                    <tr>
-                        
-                        <th>Süre</th>
-                        <th class="common-bg">Common</th>
-                        <th class="uncommon-bg">Uncommon</th>
-                        <th class="rare-bg">Rare</th>
-                        <th class="epic-bg">Epic</th>
-                        <th class="legendary-bg">Legendary</th>
-                        <th class="common-bg">Common</th>
-                        <th class="uncommon-bg">Uncommon</th>
-                        <th class="rare-bg">Rare</th>
-                        <th class="epic-bg">Epic</th>
-                        <th class="legendary-bg">Legendary</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <tr>
-                        <td>
-                            <img src="image/egg.png"  class="seed-image-icon">
-                            <span>Egg</span>
-                        </td>
-                        
-                        <td>30 Dakika</td>
-                        <td class="common-bg">18</td>
-                        <td class="uncommon-bg">63</td>
-                        <td class="rare-bg">91</td>
-                        <td class="epic-bg">123</td>
-                        <td class="legendary-bg">224</td>
-                        <td class="common-bg">0.61</td>
-                        <td class="uncommon-bg">2.1</td>
-                        <td class="rare-bg">3.03</td>
-                        <td class="epic-bg">4.1</td>
-                        <td class="legendary-bg">7.47</td>
-                    </tr> <tr>
-                        <td>
-                            <img src="image/milk.png"  class="seed-image-icon">
-                            <span>Milk</span>
-                        </td>
-                        
-                        <td>1 Saat 50 Dakika</td>
-                        <td class="common-bg">272</td>
-                        <td class="uncommon-bg">466</td>
-                        <td class="rare-bg">661</td>
-                        <td class="epic-bg">855</td>
-                        <td class="legendary-bg">1516</td>
-                        <td class="common-bg">2.47</td>
-                        <td class="uncommon-bg">4.24</td>
-                        <td class="rare-bg">6.01</td>
-                        <td class="epic-bg">7.77</td>
-                        <td class="legendary-bg">13.78</td>
-                    </tr> <tr>
-                        <td>
-                            <img src="image/wool.png"  class="seed-image-icon">
-                            <span>Wool</span>
-                        </td>
-                        
-                        <td>3 Saat 50 Dakika</td>
-                        <td class="common-bg">469</td>
-                        <td class="uncommon-bg">863</td>
-                        <td class="rare-bg">1334</td>
-                        <td class="epic-bg">2194</td>
-                        <td class="legendary-bg">3526</td>
-                        <td class="common-bg">2.04</td>
-                        <td class="uncommon-bg">3.75</td>
-                        <td class="rare-bg">5.8</td>
-                        <td class="epic-bg">9.54</td>
-                        <td class="legendary-bg">15.33</td>
-                    </tr>
-</tbody>
-            </table>
-          
-        </div>
-<h2 class="section-title">DOMUZ</h2>
-<div class="table-placeholder2">
-            <table id="seedsTable2">
-                <thead>
-                    <tr>
-                        <th rowspan="2">Ürün</th>
-                      <th colspan="3"><img src="image/truffle.png"  class="seed-image-icon"><span>TRUFFLE</span></th></tr><tr>
-                        <th>Süre</th>
-                        <th>Kazanılan Bio Miktarı</th>
-                        <th>Dakikaya Göre Bio Oranı</th>
-                    </tr>
-                    
-                </thead>
-                <tbody>
-                  <tr>
-                        <td>
-                            <span>Common</span>
-                        </td>
-                    <td>4 Saat</td>
-                    <td class="common-bg">4100</td>
-                    <td class="common-bg">17.08</td>
-         </tr><tr>
-                        <td>
-                            <span>Uncommon</span>
-                        </td>
-                    <td>4 Saat 30 Dakika</td>
-                    <td class="uncommon-bg">4755</td>
-                    <td class="uncommon-bg">17.61</td>
-         </tr><tr>
-                        <td>
-                            <span>Rare</span>
-                        </td>
-                    <td>5 Saat</td>
-                    <td class="rare-bg">5500</td>
-                    <td class="rare-bg">18.33</td>
-         </tr><tr>
-                        <td>
-                            <span>Epic</span>
-                        </td>
-                    <td>6 Saat 30 Dakika</td>
-                    <td class="epic-bg">8670</td>
-                    <td class="epic-bg">22.23</td>
-         </tr><tr>
-                        <td>
-                            <span>Legendary</span>
-                        </td>
-                    <td>7 Saat</td>
-                    <td class="legendary-bg">10050</td>
-                    <td class="legendary-bg">23.93</td>
-         </tr>
-                </tbody>
-            </table>
-           <table id="seedsTable2">
-                <thead>
-                   <tr>
-                        <th rowspan="2">Ürün</th>
-                      <th colspan="3"><img src="image/jacks_truffle.png"  class="seed-image-icon"><span>JACKS TRUFFLE</span></th></tr><tr>
-                        <th>Süre</th>
-                        <th>Kazanılan Bio Miktarı</th>
-                        <th>Dakikaya Göre Bio Oranı</th>
-                    </tr>
-                </thead>
-               <tbody>
-                  <tr>
-                        <td>
-                            <span>Common</span>
-                        </td>
-                    <td>7 Saat</td>
-                    <td class="common-bg">9000</td>
-                    <td class="common-bg">21.43</td>
-         </tr><tr>
-                        <td>
-                            <span>Uncommon</span>
-                        </td>
-                    <td>7 Saat 30 Dakika</td>
-                    <td class="uncommon-bg">10000</td>
-                    <td class="uncommon-bg">22.22</td>
-         </tr><tr>
-                        <td>
-                            <span>Rare</span>
-                        </td>
-                    <td>8 Saat</td>
-                    <td class="rare-bg">12248</td>
-                    <td class="rare-bg">25.52</td>
-         </tr><tr>
-                        <td>
-                            <span>Epic</span>
-                        </td>
-                    <td>8 Saat 30 Dakika</td>
-                    <td class="epic-bg">13222</td>
-                    <td class="epic-bg">25.93</td>
-         </tr><tr>
-                        <td>
-                            <span>Legendary</span>
-                        </td>
-                    <td>9 Saat</td>
-                    <td class="legendary-bg">14200</td>
-                    <td class="legendary-bg">26.30</td>
-         </tr>
-                </tbody>
-            </table>
-        </div>
-<h2 class="section-title">GEYİK</h2>
-<div class="table-placeholder2">
 
-                    <table id="seedsTable2">
-                <thead>
-                   <tr>
-                        <th rowspan="2">Ürün</th>
-                      <th colspan="3"><img src="image/gingerbread.png"  class="seed-image-icon"><span>GINGERBREAD</span></th></tr><tr>
-                        <th>Süre</th>
-                        <th>Kazanılan Bio Miktarı</th>
-                        <th>Dakikaya Göre Bio Oranı</th>
-                    </tr>
-                </thead>
-               <tbody>
-                  <tr>
-                        <td>
-                            <span>Common</span>
-                        </td>
-                    <td>5 Saat</td>
-                    <td class="common-bg">4833</td>
-                    <td class="common-bg">16.11</td>
-         </tr><tr>
-                        <td>
-                            <span>Uncommon</span>
-                        </td>
-                    <td>6 Saat</td>
-                    <td class="uncommon-bg">5973</td>
-                    <td class="uncommon-bg">16.59</td>
-         </tr><tr>
-                        <td>
-                            <span>Rare</span>
-                        </td>
-                    <td>7 Saat</td>
-                    <td class="rare-bg">7380</td>
-                    <td class="rare-bg">17.57</td>
-         </tr><tr>
-                        <td>
-                            <span>Epic</span>
-                        </td>
-                    <td>8 Saat</td>
-                    <td class="epic-bg">9501</td>
-                    <td class="epic-bg">19.79</td>
-         </tr><tr>
-                        <td>
-                            <span>Legendary</span>
-                        </td>
-                    <td>9 Saat</td>
-                    <td class="legendary-bg">11058</td>
-                    <td class="legendary-bg">20.48</td>
-         </tr>
+
+    <div class="table-container" data-table-id="egg-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('egg-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('egg-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('egg-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('egg-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('egg-table', 'legendary', this)">Legendary</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>YUMURTA</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %0 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
                 </tbody>
-            </table>
-        
-               </div>
+        </table>
+    </div>
+    <br><br><hr style="border: 1px solid #34495e; max-width: 950px; margin: 20px auto;"><br>
+
+    <div class="table-container" data-table-id="milk-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('milk-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('milk-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('milk-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('milk-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('milk-table', 'legendary', this)">Legendary</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>SÜT</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %0 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
+                </tbody>
+        </table>
+    </div>
+  
+    <br><br><hr style="border: 1px solid #34495e; max-width: 950px; margin: 20px auto;"><br>
+
+    <div class="table-container" data-table-id="yun-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('yun-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('yun-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('yun-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('yun-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('yun-table', 'legendary', this)">Legendary</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>YÜN</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %0 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
+                </tbody>
+        </table>
+    </div>
+  
+    <br><br><hr style="border: 1px solid #34495e; max-width: 950px; margin: 20px auto;"><br>
+  
+    <div class="table-container" data-table-id="truffle-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('truffle-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('truffle-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('truffle-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('truffle-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('truffle-table', 'legendary', this)">Legendary</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>TRUFFLE</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %0 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
+                </tbody>
+        </table>
+    </div>
+
+    <br><br><hr style="border: 1px solid #34495e; max-width: 950px; margin: 20px auto;"><br>
+  
+  <div class="table-container" data-table-id="jacktruffle-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('jacktruffle-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('jacktruffle-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('jacktruffle-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('jacktruffle-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('jacktruffle-table', 'legendary', this)">Legendary</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>JACK TRUFFLE</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %2 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
+                </tbody>
+        </table>
+    </div>
+
+    <br><br><hr style="border: 1px solid #34495e; max-width: 950px; margin: 20px auto;"><br>
+
+    <div class="table-container" data-table-id="geyik-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('geyik-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('geyik-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('geyik-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('geyik-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('geyik-table', 'legendary', this)">Legendary</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>GEYİK</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %0 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
+                </tbody>
+        </table>
+    </div>
+  
+    <br><br><hr style="border: 1px solid #34495e; max-width: 950px; margin: 20px auto;"><br>
+
+    <div class="table-container" data-table-id="peace-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('peace-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('peace-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('peace-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('peace-table', 'epic', this)">Epic</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>TAVUSKUŞU TÜYÜ</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %0 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
+                </tbody>
+        </table>
+    </div>
+  
+    <br><br><hr style="border: 1px solid #34495e; max-width: 950px; margin: 20px auto;"><br>
+
+    <div class="table-container" data-table-id="peace-egg-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('peace-egg-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('peace-egg-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('peace-egg-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('peace-egg-table', 'epic', this)">Epic</button>
+            
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>TAVUSKUŞU YUMURTA</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %0 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
+                </tbody>
+        </table>
+    </div>
+
+
+    
+        </div>
+
       </div>
 </main>
   
@@ -297,7 +473,510 @@
         </div>
     </footer>
 
-    <script src="js.js"></script>
+    <script>
+// Ortak satır seviyesi arka plan ve yazı renk stilleri
+const rowStyles = {
+    "Common": { bg: "#9e9e9e", text: "#000" },
+    "Uncommon": { bg: "#10cd00", text: "#000" },
+    "Rare": { bg: "#00ced1", text: "#000" },
+    "Epic": { bg: "#ff00ff", text: "#fff" },
+    "Legendary": { bg: "#d4af37", text: "#000" }
+};
+
+// GLOBAL MANUEL VERİ HAVUZU
+// İstediğin dış site görsel URL'lerini (productImg) ve tüm verileri buradan manuel düzenleyebilirsin.
+const allTablesData = {
+    
+    // ================= 1. TABLO (TRUFFLE) VERİLERİ =================
+    "truffle-table": {
+        common: {
+            productImg: "https://static.chainers.io/media/farm/beds/piggies/common/preview.png?v=1760615289240", // Örnek dış site url'si
+            criticalChance: 1.67, criticalCount: 16,
+            rows: [
+                { level: "Common", duration: "4 Saat", count: 1, amount: 4100, rate: 17.08 },
+                { level: "Uncommon", duration: "4 Saat 30 Dakika", count: 1, amount: 4755, rate: 17.61 },
+                { level: "Rare", duration: "5 Saat", count: 1, amount: 5500, rate: 18.33 },
+                { level: "Epic", duration: "6 Saat 30 Dakika", count: 1, amount: 8670, rate: 22.23 },
+                { level: "Legendary", duration: "7 Saat", count: 1, amount: 10050, rate: 23.93 }
+            ]
+        },
+        uncommon: {
+            productImg: "https://static.chainers.io/media/farm/beds/piggies/uncommon/preview.png?v=1763129500081",
+            criticalChance: 2.78, criticalCount: 20,
+            rows: [
+                { level: "Common", duration: "4 Saat", count: 2, amount: 8200, rate: 34.17 },
+                { level: "Uncommon", duration: "4 Saat 30 Dakika", count: 2, amount: 9510, rate: 35.22 },
+                { level: "Rare", duration: "5 Saat", count: 2, amount: 11000, rate: 36.67 },
+                { level: "Epic", duration: "6 Saat 30 Dakika", count: 2, amount: 17340, rate: 44.46 },
+                { level: "Legendary", duration: "7 Saat", count: 2, amount: 20100, rate: 47.86 }
+            ]
+        },
+        rare: {
+            productImg: "https://static.chainers.io/media/farm/beds/piggies/rare/preview.png?v=1765456665168",
+            criticalChance: 8.33, criticalCount: 24,
+            rows: [
+                { level: "Common", duration: "4 Saat", count: 6, amount: 24600, rate: 102.50 },
+                { level: "Uncommon", duration: "4 Saat 30 Dakika", count: 6, amount: 28530, rate: 105.67 },
+                { level: "Rare", duration: "5 Saat", count: 6, amount: 33000, rate: 110 },
+                { level: "Epic", duration: "6 Saat 30 Dakika", count: 6, amount: 52020, rate: 133.38 },
+                { level: "Legendary", duration: "7 Saat", count: 6, amount: 60300, rate: 143.57 }
+            ]
+        },
+        epic: { productImg: "https://static.chainers.io/media/farm/beds/piggies/epic/preview.png?v=1765456665168", 
+               criticalChance: 18.75, criticalCount: 28,
+            rows: [
+                { level: "Common", duration: "4 Saat", count: 12, amount: 49200, rate: 205 },
+                { level: "Uncommon", duration: "4 Saat 30 Dakika", count: 12, amount: 57060, rate: 211.33 },
+                { level: "Rare", duration: "5 Saat", count: 12, amount: 66000, rate: 220 },
+                { level: "Epic", duration: "6 Saat 30 Dakika", count: 12, amount: 104040, rate: 266.77 },
+                { level: "Legendary", duration: "7 Saat", count: 12, amount: 120600, rate: 287.14 }
+            ] },
+        legendary: { productImg: "https://static.chainers.io/media/farm/beds/piggies/legendary/preview.png?v=1765456665169", 
+                    criticalChance: 75, criticalCount: 32,
+            rows: [
+                { level: "Common", duration: "4 Saat", count: 24, amount: 98400, rate: 410 },
+                { level: "Uncommon", duration: "4 Saat 30 Dakika", count: 24, amount: 114120, rate: 422.67 },
+                { level: "Rare", duration: "5 Saat", count: 24, amount: 132000, rate: 440 },
+                { level: "Epic", duration: "6 Saat 30 Dakika", count: 24, amount: 208080, rate: 533.54 },
+                { level: "Legendary", duration: "7 Saat", count: 24, amount: 241200, rate: 574.29 }
+            ] }
+    },
+  
+  // ================= 2. TABLO (JACK TRUFFLE) VERİLERİ =================
+    "jacktruffle-table": {
+        common: {
+            productImg: "https://static.chainers.io/media/farm/beds/piggies/common/preview.png?v=1760615289240", // Örnek dış site url'si
+            criticalChance: 1.67, criticalCount: 16,
+            rows: [
+                { level: "Common", duration: "7 Saat", count: 1, amount: 9000, rate: 21.43 },
+                { level: "Uncommon", duration: "7 Saat 30 Dakika", count: 1, amount: 10000, rate: 22.22 },
+                { level: "Rare", duration: "8 Saat", count: 1, amount: 12248, rate: 25.52 },
+                { level: "Epic", duration: "8 Saat 30 Dakika", count: 1, amount: 13222, rate: 25.93 },
+                { level: "Legendary", duration: "9 Saat", count: 1, amount: 14200, rate: 26.30 }
+            ]
+        },
+        uncommon: {
+            productImg: "https://static.chainers.io/media/farm/beds/piggies/uncommon/preview.png?v=1763129500081",
+            criticalChance: 2.78, criticalCount: 20,
+            rows: [
+                { level: "Common", duration: "7 Saat", count: 2, amount: 18000, rate: 42.86 },
+                { level: "Uncommon", duration: "7 Saat 30 Dakika", count: 2, amount: 20000, rate: 44.44 },
+                { level: "Rare", duration: "8 Saat", count: 2, amount: 24496, rate: 51.03 },
+                { level: "Epic", duration: "8 Saat 30 Dakika", count: 2, amount: 26444, rate: 51.85 },
+                { level: "Legendary", duration: "9 Saat", count: 2, amount: 28400, rate: 52.59 }
+            ]
+        },
+        rare: {
+            productImg: "https://static.chainers.io/media/farm/beds/piggies/rare/preview.png?v=1765456665168",
+            criticalChance: 8.33, criticalCount: 24,
+            rows: [
+                { level: "Common", duration: "7 Saat", count: 6, amount: 54000, rate: 128.57 },
+                { level: "Uncommon", duration: "7 Saat 30 Dakika", count: 6, amount: 60000, rate: 133.33 },
+                { level: "Rare", duration: "8 Saat", count: 6, amount: 73488, rate: 153.10 },
+                { level: "Epic", duration: "8 Saat 30 Dakika", count: 6, amount: 79332, rate: 155.55 },
+                { level: "Legendary", duration: "9 Saat", count: 6, amount: 85200, rate: 157.78 }
+            ]
+        },
+        epic: { productImg: "https://static.chainers.io/media/farm/beds/piggies/epic/preview.png?v=1765456665168", 
+               criticalChance: 18.75, criticalCount: 28,
+            rows: [
+                { level: "Common", duration: "7 Saat", count: 12, amount: 108000, rate: 257.14 },
+                { level: "Uncommon", duration: "7 Saat 30 Dakika", count: 12, amount: 120000, rate: 266.67 },
+                { level: "Rare", duration: "8 Saat", count: 12, amount: 146976, rate: 306.20 },
+                { level: "Epic", duration: "8 Saat 30 Dakika", count: 12, amount: 158664, rate: 311.11 },
+                { level: "Legendary", duration: "9 Saat", count: 12, amount: 170400, rate: 315.56 }
+            ] },
+        legendary: { productImg: "https://static.chainers.io/media/farm/beds/piggies/legendary/preview.png?v=1765456665169", 
+                    criticalChance: 75, criticalCount: 32,
+            rows: [
+                { level: "Common", duration: "7 Saat", count: 24, amount: 216000, rate: 514.29 },
+                { level: "Uncommon", duration: "7 Saat 30 Dakika", count: 24, amount: 240000, rate: 533.33 },
+                { level: "Rare", duration: "8 Saat", count: 24, amount: 293952, rate: 612.40 },
+                { level: "Epic", duration: "8 Saat 30 Dakika", count: 24, amount: 317328, rate: 622.21 },
+                { level: "Legendary", duration: "9 Saat", count: 24, amount: 340800, rate: 631.11 }
+            ] }
+    },
+
+    // ================= 3. TABLO (YUMURTA) VERİLERİ =================
+    "egg-table": {
+        common: {
+            productImg: "https://static.chainers.io/media/farm/animals/birds/common/preview.png?v=1717511784114",
+            criticalChance: 0, criticalCount: 0,
+            rows: [
+                { level: "Common", duration: "30 Dakika", count: 1, amount: 18, rate: 0.60 },
+                { level: "Uncommon", duration: "30 Dakika", count: 1, amount: 63, rate: 2.10},
+                { level: "Rare", duration: "30 Dakika", count: 1, amount: 91, rate: 3.03 },
+                { level: "Epic", duration: "30 Dakika", count: 1, amount: 123, rate: 4.10 },
+                { level: "Legendary", duration: "30 Dakika", count: 1, amount: 224, rate: 7.47 }
+            ]
+        },
+       uncommon: {
+            productImg: "https://static.chainers.io/media/farm/animals/birds/uncommon/preview.png?v=1717511784114",
+            criticalChance: 0.05, criticalCount: 4,
+            rows: [
+                { level: "Common", duration: "30 Dakika", count: 2, amount: 36, rate: 1.20 },
+                { level: "Uncommon", duration: "30 Dakika", count: 2, amount: 126, rate: 4.20 },
+                { level: "Rare", duration: "30 Dakika", count: 2, amount: 182, rate: 6.07 },
+                { level: "Epic", duration: "30 Dakika", count: 2, amount: 246, rate: 8.2 },
+                { level: "Legendary", duration: "30 Dakika", count: 2, amount: 448, rate: 14.93 }
+            ]
+        },
+      rare: {
+            productImg: "https://static.chainers.io/media/farm/animals/birds/rare/preview.png?v=1717511784114",
+            criticalChance: 1.50, criticalCount: 8,
+            rows: [
+                { level: "Common", duration: "30 Dakika", count: 4, amount: 72, rate: 2.40 },
+                { level: "Uncommon", duration: "30 Dakika", count: 4, amount: 252, rate: 8.40 },
+                { level: "Rare", duration: "30 Dakika", count: 4, amount: 364, rate: 12.13 },
+                { level: "Epic", duration: "30 Dakika", count: 4, amount: 492, rate: 16.40 },
+                { level: "Legendary", duration: "30 Dakika", count: 4, amount: 896, rate: 29.87 }
+            ]
+        },
+      epic: {
+            productImg: "https://static.chainers.io/media/farm/animals/birds/epic/preview.png?v=1717511784114",
+            criticalChance: 4, criticalCount: 16,
+            rows: [
+                { level: "Common", duration: "30 Dakika", count: 8, amount: 144, rate: 4.8 },
+                { level: "Uncommon", duration: "30 Dakika", count: 8, amount: 504, rate: 16.8 },
+                { level: "Rare", duration: "30 Dakika", count: 8, amount: 728, rate: 24.27 },
+                { level: "Epic", duration: "30 Dakika", count: 8, amount: 984, rate: 32.8 },
+                { level: "Legendary", duration: "30 Dakika", count: 8, amount: 1792, rate: 59.73 }
+            ]
+        },
+      legendary: {
+            productImg: "https://static.chainers.io/media/farm/animals/birds/legendary/preview.png?v=1717511784114",
+            criticalChance: 10, criticalCount: 32,
+            rows: [
+                { level: "Common", duration: "30 Dakika", count: 16, amount: 288, rate: 9.60},
+                { level: "Uncommon", duration: "30 Dakika", count: 16, amount: 1008, rate: 33.60 },
+                { level: "Rare", duration: "30 Dakika", count: 16, amount: 1456, rate: 48.53 },
+                { level: "Epic", duration: "30 Dakika", count: 16, amount: 1968, rate: 65.60 },
+                { level: "Legendary", duration: "30 Dakika", count: 16, amount: 3584, rate: 119.47 }
+            ]
+        }
+    },
+   // ================= 4. TABLO (SÜT) VERİLERİ =================
+    "milk-table": {
+        common: {
+            productImg: "https://static.chainers.io/media/farm/animals/cattle/common/preview.png?v=1717511784114",
+            criticalChance: 0, criticalCount: 0,
+            rows: [
+                { level: "Common", duration: "1 Saat 50 Dakika", count: 1, amount: 272, rate: 2.47 },
+                { level: "Uncommon", duration: "1 Saat 50 Dakika", count: 1, amount: 466, rate: 4.24 },
+                { level: "Rare", duration: "1 Saat 50 Dakika", count: 1, amount: 661, rate: 6.01 },
+                { level: "Epic", duration: "1 Saat 50 Dakika", count: 1, amount: 855, rate: 7.77 },
+                { level: "Legendary", duration: "1 Saat 50 Dakika", count: 1, amount: 1516, rate: 13.78 }
+            ]
+        },
+       uncommon: {
+            productImg: "https://static.chainers.io/media/farm/animals/cattle/uncommon/preview.png?v=1717511784114",
+            criticalChance: 0.05, criticalCount: 4,
+            rows: [
+                { level: "Common", duration: "1 Saat 50 Dakika", count: 2, amount: 544, rate: 4.95 },
+                { level: "Uncommon", duration: "1 Saat 50 Dakika", count: 2, amount: 932, rate: 8.47 },
+                { level: "Rare", duration: "1 Saat 50 Dakika", count: 2, amount: 1322, rate: 12.02 },
+                { level: "Epic", duration: "1 Saat 50 Dakika", count: 2, amount: 1710, rate: 15.55 },
+                { level: "Legendary", duration: "1 Saat 50 Dakika", count: 2, amount: 3032, rate: 27.56 }
+            ]
+        },
+      rare: {
+            productImg: "https://static.chainers.io/media/farm/animals/cattle/rare/preview.png?v=1717511784114",
+            criticalChance: 1.50, criticalCount: 8,
+            rows: [
+                { level: "Common", duration: "1 Saat 50 Dakika", count: 4, amount: 1088, rate: 9.89 },
+                { level: "Uncommon", duration: "1 Saat 50 Dakika", count: 4, amount: 1864, rate: 16.95 },
+                { level: "Rare", duration: "1 Saat 50 Dakika", count: 4, amount: 2644, rate: 24.04 },
+                { level: "Epic", duration: "1 Saat 50 Dakika", count: 4, amount: 3420, rate: 31.09 },
+                { level: "Legendary", duration: "1 Saat 50 Dakika", count: 4, amount: 6064, rate: 55.13 }
+            ]
+        },
+      epic: {
+            productImg: "https://static.chainers.io/media/farm/animals/cattle/epic/preview.png?v=1717511784114",
+            criticalChance: 4, criticalCount: 16,
+            rows: [
+                { level: "Common", duration: "1 Saat 50 Dakika", count: 8, amount: 2176, rate: 19.78 },
+                { level: "Uncommon", duration: "1 Saat 50 Dakika", count: 8, amount: 3728, rate: 33.89 },
+                { level: "Rare", duration: "1 Saat 50 Dakika", count: 8, amount: 5288, rate: 48.07 },
+                { level: "Epic", duration: "1 Saat 50 Dakika", count: 8, amount: 6840, rate: 62.18 },
+                { level: "Legendary", duration: "1 Saat 50 Dakika", count: 8, amount: 12128, rate: 110.25 }
+            ]
+        },
+      legendary: {
+            productImg: "https://static.chainers.io/media/farm/animals/cattle/legendary/preview.png?v=1717511784114",
+            criticalChance: 10, criticalCount: 32,
+            rows: [
+                { level: "Common", duration: "1 Saat 50 Dakika", count: 16, amount: 4352, rate: 39.56},
+                { level: "Uncommon", duration: "1 Saat 50 Dakika", count: 16, amount: 7456, rate: 67.78 },
+                { level: "Rare", duration: "1 Saat 50 Dakika", count: 16, amount: 10576, rate: 96.15 },
+                { level: "Epic", duration: "1 Saat 50 Dakika", count: 16, amount: 13680, rate: 124.36 },
+                { level: "Legendary", duration: "1 Saat 50 Dakika", count: 16, amount: 24256, rate: 220.51 }
+            ]
+        }
+    },
+   // ================= 5. TABLO (YÜN) VERİLERİ =================
+    "yun-table": {
+        common: {
+            productImg: "https://static.chainers.io/media/farm/beds/fuzzies/common/preview.png?v=1742480059907",
+            criticalChance: 0, criticalCount: 0,
+            rows: [
+                { level: "Common", duration: "3 Saat 50 Dakika", count: 1, amount: 469, rate: 2.04 },
+                { level: "Uncommon", duration: "3 Saat 50 Dakika", count: 1, amount: 863, rate: 3.75 },
+                { level: "Rare", duration: "3 Saat 50 Dakika", count: 1, amount: 1334, rate: 5.80 },
+                { level: "Epic", duration: "3 Saat 50 Dakika", count: 1, amount: 2194, rate: 9.54 },
+                { level: "Legendary", duration: "3 Saat 50 Dakika", count: 1, amount: 3526, rate: 15.33 }
+            ]
+        },
+       uncommon: {
+            productImg: "https://static.chainers.io/media/farm/beds/fuzzies/uncommon/preview.png?v=1742480059907",
+            criticalChance: 0.05, criticalCount: 4,
+            rows: [
+                { level: "Common", duration: "3 Saat 50 Dakika", count: 2, amount: 938, rate: 4.08 },
+                { level: "Uncommon", duration: "3 Saat 50 Dakika", count: 2, amount: 1726, rate: 7.50 },
+                { level: "Rare", duration: "3 Saat 50 Dakika", count: 2, amount: 2668, rate: 11.60 },
+                { level: "Epic", duration: "3 Saat 50 Dakika", count: 2, amount: 4388, rate: 19.08 },
+                { level: "Legendary", duration: "3 Saat 50 Dakika", count: 2, amount: 7052, rate: 30.66 }
+            ]
+        },
+      rare: {
+            productImg: "https://static.chainers.io/media/farm/beds/fuzzies/rare/preview.png?v=1742480059907",
+            criticalChance: 1.50, criticalCount: 8,
+            rows: [
+                { level: "Common", duration: "3 Saat 50 Dakika", count: 4, amount: 1876, rate: 8.16 },
+                { level: "Uncommon", duration: "3 Saat 50 Dakika", count: 4, amount: 3452, rate: 15.01 },
+                { level: "Rare", duration: "3 Saat 50 Dakika", count: 4, amount: 5336, rate: 23.20 },
+                { level: "Epic", duration: "3 Saat 50 Dakika", count: 4, amount: 8776, rate: 38.16 },
+                { level: "Legendary", duration: "3 Saat 50 Dakika", count: 4, amount: 14104, rate: 61.32 }
+            ]
+        },
+      epic: {
+            productImg: "https://static.chainers.io/media/farm/beds/fuzzies/epic/preview.png?v=1742480059907",
+            criticalChance: 4, criticalCount: 16,
+            rows: [
+                { level: "Common", duration: "3 Saat 50 Dakika", count: 8, amount: 3752, rate: 16.31 },
+                { level: "Uncommon", duration: "3 Saat 50 Dakika", count: 8, amount: 6904, rate: 30.02 },
+                { level: "Rare", duration: "3 Saat 50 Dakika", count: 8, amount: 10672, rate: 46.40 },
+                { level: "Epic", duration: "3 Saat 50 Dakika", count: 8, amount: 17552, rate: 76.31 },
+                { level: "Legendary", duration: "3 Saat 50 Dakika", count: 8, amount: 28208, rate: 122.64 }
+            ]
+        },
+      legendary: {
+            productImg: "https://static.chainers.io/media/farm/beds/fuzzies/legendary/preview.png?v=1742480059907",
+            criticalChance: 10, criticalCount: 32,
+            rows: [
+                { level: "Common", duration: "3 Saat 50 Dakika", count: 16, amount: 7504, rate: 32.63},
+                { level: "Uncommon", duration: "3 Saat 50 Dakika", count: 16, amount: 13808, rate: 60.03 },
+                { level: "Rare", duration: "3 Saat 50 Dakika", count: 16, amount: 21344, rate: 92.80 },
+                { level: "Epic", duration: "3 Saat 50 Dakika", count: 16, amount: 35104, rate: 152.63 },
+                { level: "Legendary", duration: "3 Saat 50 Dakika", count: 16, amount: 56416, rate: 245.29 }
+            ]
+        }
+    },
+  // ================= 6. TABLO (GEYİK) VERİLERİ =================
+    "geyik-table": {
+        common: {
+            productImg: "https://static.chainers.io/media/farm/beds/deers/common/preview.png?v=1766068988159",
+            criticalChance: 0, criticalCount: 0,
+            rows: [
+                { level: "Common", duration: "5 Saat", count: 1, amount: 4833, rate: 16.11 },
+                { level: "Uncommon", duration: "6 Saat", count: 1, amount: 5973, rate: 16.59 },
+                { level: "Rare", duration: "7 Saat", count: 1, amount: 7380, rate: 17.57 },
+                { level: "Epic", duration: "8 Saat", count: 1, amount: 9501, rate: 19.79 },
+                { level: "Legendary", duration: "9 Saat", count: 1, amount: 11058, rate: 20.48 }
+            ]
+        },
+       uncommon: {
+            productImg: "https://static.chainers.io/media/farm/beds/deers/uncommon/preview.png?v=1766068988159",
+            criticalChance: 10, criticalCount: 4,
+            rows: [
+                { level: "Common", duration: "5 Saat", count: 3, amount: 14499, rate: 48.33 },
+                { level: "Uncommon", duration: "6 Saat", count: 3, amount: 17919, rate: 49.78 },
+                { level: "Rare", duration: "7 Saat", count: 3, amount: 22140, rate: 52.71 },
+                { level: "Epic", duration: "8 Saat", count: 3, amount: 28503, rate: 59.38 },
+                { level: "Legendary", duration: "9 Saat", count: 3, amount: 33174, rate: 61.43 }
+            ]
+        },
+      rare: {
+            productImg: "https://static.chainers.io/media/farm/beds/deers/rare/preview.png?v=1766068988159",
+            criticalChance: 20, criticalCount: 6,
+            rows: [
+                { level: "Common", duration: "5 Saat", count: 4, amount: 19332, rate: 64.44 },
+                { level: "Uncommon", duration: "6 Saat", count: 4, amount: 23892, rate: 66.37 },
+                { level: "Rare", duration: "7 Saat", count: 4, amount: 29520, rate: 70.29 },
+                { level: "Epic", duration: "8 Saat", count: 4, amount: 38004, rate: 79.18 },
+                { level: "Legendary", duration: "9 Saat", count: 4, amount: 44232, rate: 81.91 }
+            ]
+        },
+      epic: {
+            productImg: "https://static.chainers.io/media/farm/beds/deers/epic/preview.png?v=1766068988159",
+            criticalChance: 30, criticalCount: 12,
+            rows: [
+                { level: "Common", duration: "5 Saat", count: 8, amount: 28664, rate: 128.88 },
+                { level: "Uncommon", duration: "6 Saat", count: 8, amount: 47784, rate: 132.73 },
+                { level: "Rare", duration: "7 Saat", count: 8, amount: 59040, rate: 140.57 },
+                { level: "Epic", duration: "8 Saat", count: 8, amount: 76008, rate: 158.35 },
+                { level: "Legendary", duration: "9 Saat", count: 8, amount: 88464, rate: 163.82 }
+            ]
+        },
+      legendary: {
+            productImg: "https://static.chainers.io/media/farm/beds/deers/legendary/preview.png?v=1766068988159",
+            criticalChance: 50, criticalCount: 20,
+            rows: [
+                { level: "Common", duration: "5 Saat", count: 16, amount: 77328, rate: 257.76 },
+                { level: "Uncommon", duration: "6 Saat", count: 16, amount: 95568, rate: 265.47 },
+                { level: "Rare", duration: "7 Saat", count: 16, amount: 118080, rate: 281.14 },
+                { level: "Epic", duration: "8 Saat", count: 16, amount: 152016, rate: 316.70 },
+                { level: "Legendary", duration: "9 Saat", count: 16, amount: 176928, rate: 327.64 }
+            ]
+        }
+    },
+  // ================= 7. TABLO (PEACE TÜY) VERİLERİ =================
+    "peace-table": {
+        common: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/common/preview.png?v=1778075231699",
+            criticalChance: 65, criticalCount: 20,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 1, amount: 5812, rate: 23.06 },
+                
+            ]
+        },
+       uncommon: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/uncommon/preview.png?v=1778075231699",
+            criticalChance: 70, criticalCount: 23,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 1, amount: 5812, rate: 23.06 },
+                
+            ]
+        },
+      rare: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/rare/preview.png?v=1778075231699",
+            criticalChance: 75, criticalCount: 26,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 2, amount: 11624, rate: 46.13 },
+                
+            ]
+        },
+      epic: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/epic/preview.png?v=1778075231699",
+            criticalChance: 80, criticalCount: 29,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 6, amount: 34872, rate: 138.38 },
+               
+            ]
+        },
+      
+    },
+  
+  // ================= 7. TABLO (PEACE YUMURTA) VERİLERİ =================
+    "peace-egg-table": {
+        common: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/common/preview.png?v=1778075231699",
+            criticalChance: 65, criticalCount: 20,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 1, amount: 8655, rate: 23.65 },
+                { level: "Uncommon", duration: "4 Saat 12 Dakika", count: 1, amount: 9032, rate: 23.89 },
+                
+            ]
+        },
+       uncommon: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/uncommon/preview.png?v=1778075231699",
+            criticalChance: 70, criticalCount: 23,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 1, amount: 8655, rate: 23.65 },
+                { level: "Uncommon", duration: "4 Saat 12 Dakika", count: 1, amount: 9032, rate: 23.89 },
+                
+            ]
+        },
+      rare: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/rare/preview.png?v=1778075231699",
+            criticalChance: 75, criticalCount: 26,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 2, amount: 17310, rate: 47.30 },
+                { level: "Uncommon", duration: "4 Saat 12 Dakika", count: 2, amount: 18064, rate: 47.79 },
+                
+            ]
+        },
+      epic: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/epic/preview.png?v=1778075231699",
+            criticalChance: 80, criticalCount: 29,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 6, amount: 51930, rate: 141.89 },
+                { level: "Uncommon", duration: "4 Saat 12 Dakika", count: 6, amount: 54192, rate: 143.37 },
+               
+            ]
+        },
+      
+    },
+};
+
+// ANA GÜNCELLEME VE HESAPLAMA FONKSİYONU
+function updateTable(tableId, tierName, element = null) {
+    const container = document.querySelector(`[data-table-id="${tableId}"]`);
+    if (!container) return;
+
+    const tbody = container.querySelector(".class-tbody");
+    const criticalTh = container.querySelector(".class-critical");
+    const productImgTag = container.querySelector(".class-image");
+
+    const tableData = allTablesData[tableId];
+    if (!tableData) return;
+
+    const tier = tableData[tierName];
+    if (!tier) return;
+
+    // 1. Dış Siteden Gelen Ürün Görselini Değiştir
+    if (tier.productImg) {
+        productImgTag.src = tier.productImg;
+        productImgTag.style.display = "block";
+    } else {
+        productImgTag.style.display = "none"; // Eğer URL girilmemişse boş kalıp kırık ikon görünmesin
+    }
+
+    // 2. Kritik Şans ve Miktar Alanını Güncelle
+    criticalTh.innerHTML = `Kritik Şans: %${tier.criticalChance} | Kritik Ürün Miktarı: ${tier.criticalCount}`;
+
+    // 3. Tablo İçeriğini Temizle ve Yeni Manuel Satırları Bas
+    tbody.innerHTML = "";
+    tier.rows.forEach(row => {
+        const style = rowStyles[row.level] || { bg: "#ffffff", text: "#000000" };
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td class="font-weight-bold">${row.level}</td>
+            <td>${row.duration}</td>
+            <td class="font-weight-bold" style="color: #27ae60;">${row.count} Adet</td>
+            <td style="background-color: ${style.bg}; color: ${style.text}; font-weight: bold;">${row.amount}</td>
+            <td style="background-color: ${style.bg}; color: ${style.text}; font-weight: bold;">${row.rate}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    // 4. Sadece O Tabloya Ait Butonların Aktiflik (Renk) Durumunu Güncelle
+    const buttons = container.querySelectorAll('.tier-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    if (element) {
+        element.classList.add('active');
+    } else {
+        // İlk açılışta veya otomatik yüklemede listenin ilk butonunu (Common) aktif seç
+        if(buttons.length > 0) {
+            buttons[0].classList.add('active');
+        }
+    }
+}
+
+// SAYFA YÜKLENDİĞİ AN ÇALIŞACAK ALAN
+window.onload = () => {
+    // Tüm tablolar başlangıçta otomatik olarak 'common' modunda verilerle dolu gelir
+    updateTable('truffle-table', 'common');
+    updateTable('jacktruffle-table', 'common');
+    updateTable('egg-table', 'common');
+    updateTable('milk-table', 'common');
+    updateTable('yun-table', 'common');
+    updateTable('geyik-table', 'common');
+    updateTable('peace-table', 'common');
+    updateTable('peace-egg-table', 'common');
+};
+        
+    </script>
 </body>
 
 </html>
