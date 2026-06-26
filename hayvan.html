@@ -383,6 +383,7 @@ th, td {
             <button class="tier-btn" onclick="updateTable('peace-table', 'uncommon', this)">Uncommon</button>
             <button class="tier-btn" onclick="updateTable('peace-table', 'rare', this)">Rare</button>
             <button class="tier-btn" onclick="updateTable('peace-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('peace-table', 'legendary', this)">Legendary</button>
         </div>
 
         <table>
@@ -421,6 +422,7 @@ th, td {
             <button class="tier-btn" onclick="updateTable('peace-egg-table', 'uncommon', this)">Uncommon</button>
             <button class="tier-btn" onclick="updateTable('peace-egg-table', 'rare', this)">Rare</button>
             <button class="tier-btn" onclick="updateTable('peace-egg-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('peace-egg-table', 'legendary', this)">Legendary</button>
             
         </div>
 
@@ -861,17 +863,28 @@ const allTablesData = {
                
             ]
         },
+        legendary: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/legendary/preview.png?v=1779725393399",
+            criticalChance: 85, criticalCount: 32,
+            rows: [
+                { level: "Common", duration: "4 Saat 12 Dakika", count: 24, amount: 139488, rate: 553.52 },
+                
+            ]
+        }
       
     },
   
-  // ================= 7. TABLO (PEACE YUMURTA) VERİLERİ =================
+  // ================= 8. TABLO (PEACE YUMURTA) VERİLERİ =================
     "peace-egg-table": {
         common: {
             productImg: "https://static.chainers.io/media/farm/beds/peacocks/common/preview.png?v=1778075231699",
             criticalChance: 65, criticalCount: 20,
             rows: [
-                { level: "Common", duration: "4 Saat 12 Dakika", count: 1, amount: 8655, rate: 23.65 },
-                { level: "Uncommon", duration: "4 Saat 12 Dakika", count: 1, amount: 9032, rate: 23.89 },
+                { level: "Common", duration: "6 Saat 6 Dakika", count: 1, amount: 8655, rate: 23.65 },
+                { level: "Uncommon", duration: "6 Saat 18 Dakika", count: 1, amount: 9032, rate: 23.89 },
+                { level: "Rare", duration: "8 Saat", count: 1, amount: 11858, rate: 24.70 },
+                { level: "Epic", duration: "9 Saat 48 Dakika", count: 1, amount: 15119, rate: 25.71 },
+                { level: "Legendary", duration: "10 Saat 36 Dakika", count: 1, amount: 18900, rate: 29.72 }
                 
             ]
         },
@@ -879,8 +892,11 @@ const allTablesData = {
             productImg: "https://static.chainers.io/media/farm/beds/peacocks/uncommon/preview.png?v=1778075231699",
             criticalChance: 70, criticalCount: 23,
             rows: [
-                { level: "Common", duration: "4 Saat 12 Dakika", count: 1, amount: 8655, rate: 23.65 },
-                { level: "Uncommon", duration: "4 Saat 12 Dakika", count: 1, amount: 9032, rate: 23.89 },
+                { level: "Common", duration: "6 Saat 6 Dakika", count: 1, amount: 8655, rate: 23.65 },
+                { level: "Uncommon", duration: "6 Saat 18 Dakika", count: 1, amount: 9032, rate: 23.89 },
+                { level: "Rare", duration: "8 Saat", count: 1, amount: 11858, rate: 24.70 },
+                { level: "Epic", duration: "9 Saat 48 Dakika", count: 1, amount: 15119, rate: 25.71 },
+                { level: "Legendary", duration: "10 Saat 36 Dakika", count: 1, amount: 18900, rate: 29.72 }
                 
             ]
         },
@@ -888,8 +904,11 @@ const allTablesData = {
             productImg: "https://static.chainers.io/media/farm/beds/peacocks/rare/preview.png?v=1778075231699",
             criticalChance: 75, criticalCount: 26,
             rows: [
-                { level: "Common", duration: "4 Saat 12 Dakika", count: 2, amount: 17310, rate: 47.30 },
-                { level: "Uncommon", duration: "4 Saat 12 Dakika", count: 2, amount: 18064, rate: 47.79 },
+                { level: "Common", duration: "6 Saat 6 Dakika", count: 2, amount: 17310, rate: 47.30 },
+                { level: "Uncommon", duration: "6 Saat 18 Dakika", count: 2, amount: 18064, rate: 47.79 },
+                { level: "Rare", duration: "8 Saat", count: 2, amount: 23716, rate: 49.41 },
+                { level: "Epic", duration: "9 Saat 48 Dakika", count: 2, amount: 30238, rate: 51.43 },
+                { level: "Legendary", duration: "10 Saat 36 Dakika", count: 2, amount: 37800, rate: 59.43 }
                 
             ]
         },
@@ -897,11 +916,26 @@ const allTablesData = {
             productImg: "https://static.chainers.io/media/farm/beds/peacocks/epic/preview.png?v=1778075231699",
             criticalChance: 80, criticalCount: 29,
             rows: [
-                { level: "Common", duration: "4 Saat 12 Dakika", count: 6, amount: 51930, rate: 141.89 },
-                { level: "Uncommon", duration: "4 Saat 12 Dakika", count: 6, amount: 54192, rate: 143.37 },
-               
+                { level: "Common", duration: "6 Saat 6 Dakika", count: 6, amount: 51930, rate: 141.89 },
+                { level: "Uncommon", duration: "6 Saat 18 Dakika", count: 6, amount: 54192, rate: 143.37 },
+                { level: "Rare", duration: "8 Saat", count: 6, amount: 71148, rate: 148.23 },
+                { level: "Epic", duration: "9 Saat 48 Dakika", count: 6, amount: 90714, rate: 154.28 },
+                { level: "Legendary", duration: "10 Saat 36 Dakika", count: 6, amount: 113400, rate: 178.30 }
+                
             ]
         },
+      legendary: {
+            productImg: "https://static.chainers.io/media/farm/beds/peacocks/legendary/preview.png?v=1779725393399",
+            criticalChance: 85, criticalCount: 32,
+            rows: [
+                { level: "Common", duration: "6 Saat 6 Dakika", count: 24, amount: 207720, rate: 567.54 },
+                { level: "Uncommon", duration: "6 Saat 18 Dakika", count: 24, amount: 216768, rate: 573.46 },
+                { level: "Rare", duration: "8 Saat", count: 24, amount: 284592, rate: 592.90 },
+                { level: "Epic", duration: "9 Saat 48 Dakika", count: 24, amount: 362856, rate: 617.10 },
+                { level: "Legendary", duration: "10 Saat 36 Dakika", count: 24, amount: 454600, rate: 713.21 }
+                
+            ]
+        }
       
     },
 };
