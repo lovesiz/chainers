@@ -8,6 +8,24 @@
   
     <link rel="stylesheet" href="ministyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Sağ tablodaki satırların tıklanabilir olduğunu belirtir */
+.reward-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Fareyle üzerine gelindiğinde hafif bir vurgu */
+.reward-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Temana göre rengi değiştirebilirsin */
+}
+
+/* O an seçili olan ve sol tabloyu güncelleyen satırın kalıcı vurgusu */
+.reward-table tbody tr.selected-reward-row {
+    background-color: rgba(241, 196, 15, 0.2) !important; /* Örn: Hafif sarı/altın tonu */
+    border-left: 4px solid #f1c40f;
+}
+    </style>
 </head>
 <body>
 
@@ -139,7 +157,7 @@
                     <td class="row-index">5</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/uncommon/preview.png?v=1774536709786" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/basic/rare/preview.png?v=1708363019810" alt="">
                             <span>Rare Plastic Plot</span>
                         </div>
                     </td>
@@ -151,7 +169,7 @@
                     <td class="row-index">6</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/piggies/rare/preview.png?v=1765456665168" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
                             <span>Common Protoflower Seed</span>
                         </div>
                     </td>
@@ -163,7 +181,7 @@
                     <td class="row-index">7</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/common/preview.png?v=1774536709787" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/legendary/preview.png?v=1752764673781" alt="">
                             <span>Legendary Growth Fertilizer</span>
                         </div>
                     </td>
@@ -187,7 +205,7 @@
                     <td class="row-index">9</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/rare/preview.png?v=1774536709787" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/deers/epic/preview.png?v=1766068988159" alt="">
                             <span>Epic Blitzen Charger</span>
                         </div>
                     </td>
@@ -199,7 +217,7 @@
                     <td class="row-index">10</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/rare/preview.png?v=1774536709787" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
                             <span>Common Protoflower Seed</span>
                         </div>
                     </td>
@@ -211,7 +229,7 @@
                     <td class="row-index">11</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/rare/preview.png?v=1774536709786" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/common/preview.png?v=1709042580935" alt="">
                             <span>Common Growth Fertilizer</span>
                         </div>
                     </td>
@@ -235,7 +253,7 @@
                     <td class="row-index">13</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/common/preview.png?v=1774536709786" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/physalis/epic/preview.png?v=1782480398661" alt="">
                             <span>Epic Physalis Seed</span>
                         </div>
                     </td>
@@ -247,7 +265,7 @@
                     <td class="row-index">14</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/basic/uncommon/preview.png?v=1708363019810" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
                             <span>Common Protoflower Seed</span>
                         </div>
                     </td>
@@ -259,7 +277,7 @@
                     <td class="row-index">15</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/epic/preview.png?v=1774536709787" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/legendary/preview.png?v=1752764673781" alt="">
                             <span>Legendary Growth Fertilizer</span>
                         </div>
                     </td>
@@ -283,7 +301,7 @@
                     <td class="row-index">17</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/epic/preview.png?v=1774536709786" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/basil/epic/preview.png?v=1784202674543" alt="">
                             <span>Epic Basil Seed</span>
                         </div>
                     </td>
@@ -295,7 +313,7 @@
                     <td class="row-index">18</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/peacocks/common/preview.png?v=1778075231699" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
                             <span>Common Protoflower Seed</span>
                         </div>
                     </td>
@@ -307,7 +325,7 @@
                     <td class="row-index">19</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/common/preview.png?v=1774536709786" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/common/preview.png?v=1709042580935" alt="">
                             <span>Common Growth Fertilizer</span>
                         </div>
                     </td>
@@ -331,7 +349,7 @@
                     <td class="row-index">21</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/lavender/legendary/preview.png?v=1774536709787" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/piggies/epic/preview.png?v=1765456665168" alt="">
                             <span>Epic Valentine</span>
                         </div>
                     </td>
@@ -343,7 +361,7 @@
                     <td class="row-index">22</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/jasmine/legendary/preview.png?v=1774536709787" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/proto_flower/common/preview.png?v=1779970746423" alt="">
                             <span>Common Protoflower Seed</span>
                         </div>
                     </td>
@@ -355,7 +373,7 @@
                     <td class="row-index">23</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/gomphrena/legendary/preview.png?v=1774536709786" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/legendary/preview.png?v=1752764673781" alt="">
                             <span>Legendary Growth Fertilizer</span>
                         </div>
                     </td>
@@ -379,7 +397,7 @@
                     <td class="row-index">25</td>
                     <td>
                         <div class="reward-name-cell">
-                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/piggies/legendary/preview.png?v=1773241927049" alt="">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/peacocks/epic/preview.png?v=1779725393399" alt="">
                             <span>Epic Akita</span>
                         </div>
                     </td>
@@ -411,7 +429,124 @@
                 
         </div>
     </footer>
+<script>
+        // --- JS İÇİNDE TUTULAN VE DEĞİŞTİREBİLECEĞİNİZ DEĞERLER ---
+const DATA = {
+    toplamPuan: 0,        // Sayfa açılışında sağ tablodan dinamik olarak doldurulacak
+    storeDegeri: 10,       
+    mergeDegeri: 7,      
+    fertilizerDegeri: 8   
+};
 
+// --- DIŞ SİTEDEN ÇEKECEĞİNİZ RESİMLERİN DOSYA YOLLARI ---
+const ICONS = {
+    cfb: "https://rollerhelper.com/chainers_helper/en/img/Icones/pool/icon_cfb.png", 
+    dollar: "https://rollerhelper.com/chainers_helper/en/img/Icones/pool/dollar.png"
+};
+
+// Sol tabloyu (Çarpan) hesaplayan ve ekrana basan fonksiyon
+function initLeftTable() {
+    const tbody = document.getElementById("multiplier-tbody");
+    tbody.innerHTML = "";
+
+    // İlk satırın (x1) başlangıç (baz) değerlerini hesaplıyoruz
+    const baseStore = Math.round(DATA.toplamPuan / DATA.storeDegeri);
+    const baseMerge = Math.round(DATA.toplamPuan / DATA.mergeDegeri);
+    const baseFertilizer = Math.round(DATA.toplamPuan / DATA.fertilizerDegeri);
+
+    let isGreenHighlighted = false;
+
+    // Tam 50 satır olacak şekilde döngü
+    for (let x = 1; x <= 50; x++) {
+        const cfbValue = (x - 1) * 200;
+        const cryptoPrice = (x - 1) * 5;
+
+        // Her satırın değeri = ilk satırın değeri / x
+        const currentStore = Math.round(baseStore / x);
+        const currentMerge = Math.round(baseMerge / x);
+        const currentFertilizer = Math.round(baseFertilizer / x);
+
+        const tr = document.createElement("tr");
+
+        // KOŞUL: Spend in Store değeri, Convert CFB değerinden İLK KEZ küçük olduğunda satırı açık yeşil yap
+        if (!isGreenHighlighted && currentStore < cfbValue) {
+            tr.classList.add("green-highlight-row");
+            isGreenHighlighted = true; 
+        }
+
+        tr.innerHTML = `
+            <td class="row-index">x${x}</td>
+            <td>
+                <div class="cell-with-icon">
+                    ${cfbValue} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                </div>
+            </td>
+            <td>
+                <div class="cell-with-icon">
+                    ${cryptoPrice.toFixed(2)} <img class="cell-icon" src="${ICONS.dollar}" alt="">
+                </div>
+            </td>
+            <td>
+                <div class="cell-with-icon">
+                    ${currentStore} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                </div>
+            </td>
+            <td>
+                <div class="cell-with-icon">
+                    ${currentMerge} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                </div>
+            </td>
+            <td>${currentFertilizer}</td>
+        `;
+        
+        tbody.appendChild(tr);
+    }
+}
+
+// Sağ tablodaki satırlara tıklama özelliği kazandıran fonksiyon
+function setupRewardTableEvents() {
+    // Ödüller tablosunun body içindeki tüm satırlarını seçiyoruz
+    const rewardRows = document.querySelectorAll(".reward-table tbody tr");
+    
+    rewardRows.forEach(row => {
+        row.addEventListener("click", function() {
+            // Aktif satır vurgusu için eski seçili olanların sınıfını temizle
+            rewardRows.forEach(r => r.classList.remove("selected-reward-row"));
+            // Tıklanan satıra vurgu sınıfı ekle
+            this.classList.add("selected-reward-row");
+
+            // Son hücredeki (Toplam XP) strong etiketinin içindeki metni alıyoruz (Örn: "1500 XP")
+            const totalXpText = this.cells[4].querySelector("strong").innerText;
+            
+            // " XP" kısmını temizleyip sadece sayıya dönüştürüyoruz
+            const xpValue = parseInt(totalXpText.replace(/[^0-9]/g, ""), 10);
+            
+            // DATA nesnesini güncelleyip sol tabloyu yeniden hesaplatıyoruz
+            DATA.toplamPuan = xpValue;
+            initLeftTable();
+        });
+    });
+
+    // SAYFA İLK AÇILDIĞINDA: En son satırı otomatik seç ve tetikle
+    if (rewardRows.length > 0) {
+        const lastRow = rewardRows[rewardRows.length - 1];
+        
+        // Son satırın XP değerini ayıkla
+        const lastRowXpText = lastRow.cells[4].querySelector("strong").innerText;
+        const lastRowXpValue = parseInt(lastRowXpText.replace(/[^0-9]/g, ""), 10);
+        
+        // İlk hesabı son satıra göre yap ve satırı görsel olarak seçili hale getir
+        DATA.toplamPuan = lastRowXpValue;
+        lastRow.classList.add("selected-reward-row");
+        initLeftTable();
+    }
+}
+
+// Sayfa yüklendiğinde iki fonksiyonu da çalıştır
+window.onload = function() {
+    setupRewardTableEvents();
+};
+    </script>
     <script src="js.js"></script>
 </body>
 
