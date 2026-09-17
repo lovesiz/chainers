@@ -143,6 +143,45 @@ th, td {
 <main class="content-container">
     <div class="main-content">
 
+  
+    <div class="table-container" data-table-id="fire-feather-table">
+        <div class="button-group">
+            <button class="tier-btn" onclick="updateTable('fire-feather-table', 'common', this)">Common</button>
+            <button class="tier-btn" onclick="updateTable('fire-feather-table', 'uncommon', this)">Uncommon</button>
+            <button class="tier-btn" onclick="updateTable('fire-feather-table', 'rare', this)">Rare</button>
+            <button class="tier-btn" onclick="updateTable('fire-feather-table', 'epic', this)">Epic</button>
+            <button class="tier-btn" onclick="updateTable('fire-feather-table', 'legendary', this)">Legendary</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="3" class="bg-dark-green">Ürün</th>
+                    <th colspan="4" class="bg-light-green">
+                        <div class="product-header">
+                            <img src="" alt="Ürün Görseli" class="product-image class-image">
+                            <span>WHITE TRUFFLE</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="bg-critical-info class-critical">
+                        Kritik Şans: %0 | Kritik Ürün Miktarı: 0
+                    </th>
+                </tr>
+                <tr>
+                    <th class="bg-medium-green">Süre</th>
+                    <th class="bg-medium-green">Ürün Adedi</th>
+                    <th class="bg-medium-green">Kazanılan Bio Miktarı</th>
+                    <th class="bg-medium-green">Dakikaya Göre Bio Oranı</th>
+                </tr>
+            </thead>
+            <tbody class="class-tbody">
+                </tbody>
+        </table>
+    </div>
+
+    <br><br><hr style="border: 1px solid #34495e; max-width: 950px; margin: 20px auto;"><br>
 
   
     <div class="table-container" data-table-id="white-truffle-table">
@@ -1033,6 +1072,54 @@ const allTablesData = {
         }
       
     },
+// =================  TABLO (FİRE FEATHER) VERİLERİ =================
+    "fire-feather-table": {
+       common: {
+    productImg: "https://static.chainers.io/media/farm/beds/firebirds/common/preview.png?v=1787827421492",
+    criticalChance: 50, criticalCount: 2,
+    rows: [
+        { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/fire_feather/common/preview.png?v=1787827442360", duration: "5 Saat 52 Dakika 12 Saniye", count: 1, amount: 30000, rate: 85.18 },
+       
+    ]
+},
+       uncommon: {
+            productImg: "https://static.chainers.io/media/farm/beds/firebirds/uncommon/preview.png?v=1787827421492",
+            criticalChance: 62.5, criticalCount: 4,
+            rows: [
+                { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/fire_feather/common/preview.png?v=1787827442360", duration: "5 Saat 52 Dakika 12 Saniye", count: 2, amount: 60000, rate: 170.36 },
+                
+                
+            ]
+        },
+      rare: {
+            productImg: "https://static.chainers.io/media/farm/beds/firebirds/rare/preview.png?v=1787827421492",
+            criticalChance: 50, criticalCount: 9,
+            rows: [
+                { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/fire_feather/common/preview.png?v=1787827442360", duration: "5 Saat 52 Dakika 12 Saniye", count: 5, amount: 150000, rate: 425.89 },
+                
+                
+            ]
+        },
+      epic: {
+            productImg: "https://static.chainers.io/media/farm/beds/firebirds/epic/preview.png?v=1787827421492",
+            criticalChance: 62.5, criticalCount: 18,
+            rows: [
+                { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/fire_feather/common/preview.png?v=1787827442360", duration: "5 Saat 52 Dakika 12 Saniye", count: 10, amount: 300000, rate: 851.79 },
+                
+                
+            ]
+        },
+      legendary: {
+            productImg: "https://static.chainers.io/media/farm/beds/firebirds/legendary/preview.png?v=1787827421492",
+            criticalChance: 68.75, criticalCount: 36,
+            rows: [
+                { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/fire_feather/common/preview.png?v=1787827442360", duration: "5 Saat 52 Dakika 12 Saniye", count: 20, amount: 600000, rate: 1703.58 },
+                
+                
+            ]
+        }
+      
+    },
     
 };
 
@@ -1109,6 +1196,7 @@ window.onload = () => {
     updateTable('peace-table', 'common');
     updateTable('peace-egg-table', 'common');
     updateTable('white-truffle-table', 'common');
+    updateTable('fire-feather-table', 'common');
 };
         
     </script>
