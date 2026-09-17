@@ -987,20 +987,19 @@ const allTablesData = {
     },
 // =================  TABLO (WHITE TRUFFLE) VERİLERİ =================
     "white-truffle-table": {
-        common: {
-            productImg: "https://static.chainers.io/media/farm/beds/piggies/common/preview.png?v=1760615289240",
-            criticalChance: 1.67, criticalCount: 16,
-            rows: [
-                { level: "Common", duration: "3 Saat 50 Dakika", count: 1, amount: 28869, rate: 125.63 },
-                
-                
-            ]
-        },
+       common: {
+    productImg: "https://static.chainers.io/media/farm/beds/piggies/common/preview.png?v=1760615289240",
+    criticalChance: 1.67, criticalCount: 16,
+    rows: [
+        { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/white_truffle/common/preview.png?v=1789042685507", duration: "4 Saat", count: 1, amount: 4100, rate: 17.08 },
+       
+    ]
+},
        uncommon: {
             productImg: "https://static.chainers.io/media/farm/beds/piggies/uncommon/preview.png?v=1763129500081",
             criticalChance: 2.78, criticalCount: 20,
             rows: [
-                { level: "Common", duration: "3 Saat 50 Dakika", count: 2, amount: 57738, rate: 251.25 },
+                { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/white_truffle/common/preview.png?v=1789042685507", duration: "3 Saat 50 Dakika", count: 2, amount: 57738, rate: 251.25 },
                 
                 
             ]
@@ -1009,7 +1008,7 @@ const allTablesData = {
             productImg: "https://static.chainers.io/media/farm/beds/piggies/rare/preview.png?v=1765456665168",
             criticalChance: 8.33, criticalCount: 24,
             rows: [
-                { level: "Common", duration: "3 Saat 50 Dakika", count: 6, amount: 173214, rate: 753.76 },
+                { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/white_truffle/common/preview.png?v=1789042685507", duration: "3 Saat 50 Dakika", count: 6, amount: 173214, rate: 753.76 },
                 
                 
             ]
@@ -1018,7 +1017,7 @@ const allTablesData = {
             productImg: "https://static.chainers.io/media/farm/beds/piggies/epic/preview.png?v=1765456665168",
             criticalChance: 18.75, criticalCount: 28,
             rows: [
-                { level: "Common", duration: "3 Saat 50 Dakika", count: 12, amount: 346428, rate: 1507.52 },
+                { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/white_truffle/common/preview.png?v=1789042685507", duration: "3 Saat 50 Dakika", count: 12, amount: 346428, rate: 1507.52 },
                 
                 
             ]
@@ -1027,7 +1026,7 @@ const allTablesData = {
             productImg: "https://static.chainers.io/media/farm/beds/piggies/legendary/preview.png?v=1765456665169",
             criticalChance: 75, criticalCount: 32,
             rows: [
-                { level: "Common", duration: "3 Saat 50 Dakika", count: 24, amount: 692856, rate: 3015.04 },
+                { level: "Common", img: "https://static.chainers.io/media/farm/vegetables/white_truffle/common/preview.png?v=1789042685507", duration: "3 Saat 50 Dakika", count: 24, amount: 692856, rate: 3015.04 },
                 
                 
             ]
@@ -1064,19 +1063,25 @@ function updateTable(tableId, tierName, element = null) {
     criticalTh.innerHTML = `Kritik Şans: %${tier.criticalChance} | Kritik Ürün Miktarı: ${tier.criticalCount}`;
 
     // 3. Tablo İçeriğini Temizle ve Yeni Manuel Satırları Bas
-    tbody.innerHTML = "";
-    tier.rows.forEach(row => {
-        const style = rowStyles[row.level] || { bg: "#ffffff", text: "#000000" };
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-            <td class="font-weight-bold">${row.level}</td>
-            <td>${row.duration}</td>
-            <td class="font-weight-bold" style="color: #27ae60;">${row.count} Adet</td>
-            <td style="background-color: ${style.bg}; color: ${style.text}; font-weight: bold;">${row.amount}</td>
-            <td style="background-color: ${style.bg}; color: ${style.text}; font-weight: bold;">${row.rate}</td>
-        `;
-        tbody.appendChild(tr);
-    });
+tbody.innerHTML = "";
+tier.rows.forEach(row => {
+    const style = rowStyles[row.level] || { bg: "#ffffff", text: "#000000" };
+    const tr = document.createElement("tr");
+    
+    // Eğer satıra özel img girilmişse onu basar, girilmemişse yedek olarak metni (row.level) gösterir
+    const cellContent = row.img 
+        ? `<img src="${row.img}" alt="${row.level}" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle;">`
+        : row.level;
+
+    tr.innerHTML = `
+        <td class="font-weight-bold">${cellContent}</td>
+        <td>${row.duration}</td>
+        <td class="font-weight-bold" style="color: #27ae60;">${row.count} Adet</td>
+        <td style="background-color: ${style.bg}; color: ${style.text}; font-weight: bold;">${row.amount}</td>
+        <td style="background-color: ${style.bg}; color: ${style.text}; font-weight: bold;">${row.rate}</td>
+    `;
+    tbody.appendChild(tr);
+});
 
     // 4. Sadece O Tabloya Ait Butonların Aktiflik (Renk) Durumunu Güncelle
     const buttons = container.querySelectorAll('.tier-btn');
