@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chainers - WITCH'S BREW</title>
+    <link rel="stylesheet" href="styles.css">
+  
+    <link rel="stylesheet" href="ministyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Sağ tablodaki satırların tıklanabilir olduğunu belirtir */
+        .reward-table tbody tr {
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Fareyle üzerine gelindiğinde hafif bir vurgu */
+        .reward-table tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* O an seçili olan ve sol tabloyu güncelleyen satırın kalıcı vurgusu */
+        .reward-table tbody tr.selected-reward-row {
+            background-color: rgba(241, 196, 15, 0.2) !important;
+            border-left: 4px solid #f1c40f;
+        }
+
+        /* En düşük (kripto değeri + anket maliyeti) toplamına sahip anket hücresi */
+        .anket-green-cell {
+            background-color: #2ecc71 !important;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-menu">
+        <div class="logo-area">
+            <span class="logo-text">CHAINERS</span>
+        </div>
+       <nav class="navigation-menu">
+            <div class="menu-item"><a href="index.html">ANASAYFA</a></div>
+            <div class="menu-item"><a href="tohumlar.html">TOHUMLAR</a></div>
+            <div class="menu-item"><a href="hayvan.html">HAYVANLAR</a></div>
+            <div class="menu-item"><a href="yem.html">YEMLER</a></div>
+             <div class="menu-item"><a href="verimlilik.html">VERİMLİLİK</a></div>
+             <div class="menu-item"><a href="etkinlikler.html">ETKİNLİKLER</a></div>
+             <div class="menu-item"><a href="bagis.html">BAĞIŞ YAP</a></div>
+        </nav>
+        
+        <div class="user-actions">
+           
+        </div>
+    </header>
+
+    <div class="ad-banner">
+<script>
+  atOptions = {
+    'key' : '6e4fc0c7d02bd67dc3a9f569c3b44454',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/6e4fc0c7d02bd67dc3a9f569c3b44454/invoke.js"></script>
+
+    </div>
+<main class="content-container">
+    <div class="main-content">
+<div class="index-content">
+<h1 class="retro-text2">WITCH'S BREW</h1>
+      </div>
+<div class="index-content">
+<div class="card-container">
+       <div class="dashboard-container">
+    
+    <div class="table-wrapper left-section">
+        <div class="section-title">ÇARPAN</div>
+        <div class="price-basis">Fiyat  <strong>USDT</strong> Göre Belirlenmiştir</div><div class="price-basis"> Store :<strong> 10xp |</strong> Merge :<strong> 7xp |</strong> Gübre :<strong> 9xp |</strong> Anket :<strong> 100xp </strong></div>
+        
+        <table class="calc-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>CFB Dönüştür</th>
+                    <th>Kripto Değeri</th>
+                    <th>Market Harcaması</th>
+                    <th>Merge Harcaması</th>
+                    <th>Gübre Sayısı</th>
+                    <th>Anket</th>
+                </tr>
+            </thead>
+            <tbody id="multiplier-tbody">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="table-wrapper right-section">
+        <div class="section-title">ÖDÜLLER</div>
+        
+        <table class="reward-table">
+            <thead>
+                <tr>
+                    <th>LVL</th>
+                    <th>ÖDÜL</th>
+                    <th>ADET</th>
+                    <th>XP</th>
+                    <th>TOPLAM XP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-index">1</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/spooky_cauldron_seeds/common/preview.png?v=1790764587286" alt="">
+                            <span>SPOOKY CAULDRON SEEDS</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>100 XP</td>
+                    <td><strong>100 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">2</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/common/preview.png?v=1709042580935" alt="">
+                            <span>GROWTH FERTILIZER</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>250 XP</td>
+                    <td><strong>350 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">3</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/currencies/battle_pass/preview.png" alt="">
+                            <span>XP</span>
+                        </div>
+                    </td>
+                    <td>10</td>
+                    <td>350 XP</td>
+                    <td><strong>700 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">4</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/basic/common/preview.png?v=1708363019810" alt="">
+                            <span>CARDBOARD PLOT</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>500 XP</td>
+                    <td><strong>1200 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">5</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/ghosts/common/preview.png?v=1790764558211" alt="">
+                            <span>GHOSTY</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>1500 XP</td>
+                    <td><strong>2700 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">6</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/pool_plots/uncommon/preview.png?v=1785404080188" alt="">
+                            <span>REINFORCED POOL PLOT</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>600 XP</td>
+                    <td><strong>3300 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">7</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/basic/legendary/preview.png?v=1752764673781" alt="">
+                            <span>LEGENDARY GROWTH FERTILIZER</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>700 XP</td>
+                    <td><strong>4000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">8</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/currencies/battle_pass/preview.png" alt="">
+                            <span>XP</span>
+                        </div>
+                    </td>
+                    <td>100</td>
+                    <td>1000 XP</td>
+                    <td><strong>5000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">9</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/spooky_cauldron_seeds/rare/preview.png?v=1790764587286" alt="">
+                            <span>SPOOKY CAULDRON SEEDS</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>6000 XP</td>
+                    <td><strong>11000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">10</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/light_tree/rare/preview.png?v=1790083798760" alt="">
+                            <span>LIGHT TREE SEEDS</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>18000 XP</td>
+                    <td><strong>29000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">11</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/basic/rare/preview.png?v=1708363019810" alt="">
+                            <span>PLASTIC PLOT</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>16000 XP</td>
+                    <td><strong>45000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">12</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/fertilizers/aqua/common/preview.png?v=1787827508797" alt="">
+                            <span>COMMON AQUA FERTILIZER</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>10000 XP</td>
+                    <td><strong>55000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">13</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/currencies/battle_pass/preview.png" alt="">
+                            <span>XP</span>
+                        </div>
+                    </td>
+                    <td>500</td>
+                    <td>15000 XP</td>
+                    <td><strong>70000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">14</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/spooky_cauldron_seeds/epic/preview.png?v=1790764587286" alt="">
+                            <span>SPOOKY CAULDRON SEEDS</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>80000 XP</td>
+                    <td><strong>150000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">15</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/fiery_barberry/epic/preview.png?v=1788443270142" alt="">
+                            <span>FIERY BARBERRY SEED</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>250000 XP</td>
+                    <td><strong>400000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">16</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/pool_plots/epic/preview.png?v=1785404080188" alt="">
+                            <span>ENGINEERED POOL PLOT</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>200000 XP</td>
+                    <td><strong>600000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">17</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/currencies/icon_CFB.svg" alt="">
+                            <span>CFB</span>
+                        </div>
+                    </td>
+                    <td>200</td>
+                    <td>150000 XP</td>
+                    <td><strong>750000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">18</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/currencies/battle_pass/preview.png" alt="">
+                            <span>XP</span>
+                        </div>
+                    </td>
+                    <td>2500</td>
+                    <td>250000 XP</td>
+                    <td><strong>1000000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">19</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/seeds/spooky_cauldron_seeds/legendary/preview.png?v=1790764587286" alt="">
+                            <span>SPOOKY CAULDRON SEEDS</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>1000000 XP</td>
+                    <td><strong>2000000 XP</strong></td>
+                </tr>
+                <tr>
+                    <td class="row-index">20</td>
+                    <td>
+                        <div class="reward-name-cell">
+                            <img class="reward-img" src="https://static.chainers.io/media/farm/beds/firebirds/epic/preview.png?v=1787827421492" alt="">
+                            <span>PYROFLARE</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>2000000 XP</td>
+                    <td><strong>4000000 XP</strong></td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        
+    </div>
+      </div>
+</div>
+</main>
+  
+   <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; Bilgilendiriyor Tüm Hakları Saklıdır.</p>
+            <div class="social-links"><a href="https://www.youtube.com/@bilgilendiriyor" target="_blank" aria-label="Discord"><i class="fab fa-youtube"></i></a>
+                <a href="URL_INSTAGRAM" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="URL_TWITTER" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://t.me/bilgilendiriyor" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+              
+                </div>
+                
+        </div>
+    </footer>
+
+    <script>
+        // --- JS İÇİNDE TUTULAN VE DEĞİŞTİREBİLECEĞİNİZ DEĞERLER ---
+        const DATA = {
+            toplamPuan: 0,          // Sayfa açılışında sağ tablodan dinamik olarak doldurulacak
+            storeDegeri: 10,
+            mergeDegeri: 7,
+            anketDegeri: 100,
+            fertilizerDegeri: 9,
+            anketBirimFiyat: 0.0337 // 1 anketin USDT değeri
+        };
+
+        // --- DIŞ SİTEDEN ÇEKECEĞİNİZ RESİMLERİN DOSYA YOLLARI ---
+        const ICONS = {
+            cfb: "https://rollerhelper.com/chainers_helper/en/img/Icones/pool/icon_cfb.png",
+            dollar: "https://rollerhelper.com/chainers_helper/en/img/Icones/pool/dollar.png"
+        };
+
+        // Sol tabloyu (Çarpan) hesaplayan ve ekrana basan fonksiyon
+        function initLeftTable() {
+            const tbody = document.getElementById("multiplier-tbody");
+            tbody.innerHTML = "";
+
+            // İlk satırın (x1) başlangıç (baz) değerlerini hesaplıyoruz
+            const baseStore = Math.round(DATA.toplamPuan / DATA.storeDegeri);
+            const baseMerge = Math.round(DATA.toplamPuan / DATA.mergeDegeri);
+            const baseFertilizer = Math.round(DATA.toplamPuan / DATA.fertilizerDegeri);
+            const baseAnket = Math.round(DATA.toplamPuan / DATA.anketDegeri);
+
+            // --- ÖN HESAP: en düşük (kripto değeri + anket maliyeti) toplamına sahip satırı bul ---
+            let bestX = 1;
+            let bestTotal = Infinity;
+            for (let x = 1; x <= 200; x++) {
+                const cryptoPrice = (x - 1) * 1;
+                const anketSayisi = Math.round(baseAnket / x);
+                const total = cryptoPrice + anketSayisi * DATA.anketBirimFiyat;
+                if (total < bestTotal) {   // eşitlikte ilk (küçük x) satır kazanır
+                    bestTotal = total;
+                    bestX = x;
+                }
+            }
+
+            let isGreenHighlighted = false;
+
+            for (let x = 1; x <= 200; x++) {
+                const cfbValue = (x - 1) * 40;
+                const cryptoPrice = (x - 1) * 1;
+
+                // Her satırın değeri = ilk satırın değeri / x
+                const currentStore = Math.round(baseStore / x);
+                const currentMerge = Math.round(baseMerge / x);
+                const currentFertilizer = Math.round(baseFertilizer / x);
+                const currentAnket = Math.round(baseAnket / x);
+
+                const tr = document.createElement("tr");
+
+                // KOŞUL: Store değeri, CFB değerinden İLK KEZ küçük olduğunda satırı açık yeşil yap
+                if (!isGreenHighlighted && currentStore < cfbValue) {
+                    tr.classList.add("green-highlight-row");
+                    isGreenHighlighted = true;
+                }
+
+                tr.innerHTML = `
+                    <td class="row-index">x${x}</td>
+                    <td>
+                        <div class="cell-with-icon">
+                            ${cfbValue} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-with-icon">
+                            ${cryptoPrice.toFixed(2)} <img class="cell-icon" src="${ICONS.dollar}" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-with-icon">
+                            ${currentStore} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-with-icon">
+                            ${currentMerge} <img class="cell-icon" src="${ICONS.cfb}" alt="">
+                        </div>
+                    </td>
+                    <td>${currentFertilizer}</td>
+                    <td class="${x === bestX ? 'anket-green-cell' : ''}">${currentAnket}</td>
+                `;
+
+                tbody.appendChild(tr);
+            }
+        }
+
+        // Sağ tablodaki satırlara tıklama özelliği kazandıran fonksiyon
+        function setupRewardTableEvents() {
+            const rewardRows = document.querySelectorAll(".reward-table tbody tr");
+
+            rewardRows.forEach(row => {
+                row.addEventListener("click", function() {
+                    // Eski seçili satırın vurgusunu temizle
+                    rewardRows.forEach(r => r.classList.remove("selected-reward-row"));
+                    // Tıklanan satıra vurgu ekle
+                    this.classList.add("selected-reward-row");
+
+                    // Toplam XP hücresindeki metni al (Örn: "1500 XP") ve sayıya çevir
+                    const totalXpText = this.cells[4].querySelector("strong").innerText;
+                    const xpValue = parseInt(totalXpText.replace(/[^0-9]/g, ""), 10);
+
+                    // DATA'yı güncelle ve sol tabloyu yeniden hesapla
+                    DATA.toplamPuan = xpValue;
+                    initLeftTable();
+                });
+            });
+
+            // SAYFA İLK AÇILDIĞINDA: En son satırı otomatik seç ve tetikle
+            if (rewardRows.length > 0) {
+                const lastRow = rewardRows[rewardRows.length - 1];
+
+                const lastRowXpText = lastRow.cells[4].querySelector("strong").innerText;
+                const lastRowXpValue = parseInt(lastRowXpText.replace(/[^0-9]/g, ""), 10);
+
+                DATA.toplamPuan = lastRowXpValue;
+                lastRow.classList.add("selected-reward-row");
+                initLeftTable();
+            }
+        }
+
+        // Sayfa yüklendiğinde çalıştır
+        window.onload = function() {
+            setupRewardTableEvents();
+        };
+    </script>
+</body>
+
+</html>
